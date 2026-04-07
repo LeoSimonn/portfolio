@@ -1,0 +1,86 @@
+📋 INSTRUCTIONS FOR RUNNING YOUR PORTFOLIO
+
+📂 LOCATION:
+~/portfolio_website/
+
+📝 MAIN FILES:
+- index.html      -> Main website file (32KB)
+- styles.css      -> All visual styles (24KB)
+- script.js       -> Interactive features (15KB)
+- README.md       -> Complete documentation
+- run_server.py   -> Python local server script
+
+🚀 TO RUN LOCALLY:
+
+Method 1 - Python Server (Recommended):
+1. Open Terminal
+2. Navigate to portfolio_website:
+   cd ~/portfolio_website
+
+3. Run the server:
+   python3 run_server.py
+
+4. Open your browser and go to:
+   http://localhost:8000
+
+Method 2 - Direct File:
+1. Navigate to ~/portfolio_website/
+2. Double-click on index.html
+3. It will open in your default browser
+
+Method 3 - VS Code Live Server:
+1. Open the folder in VS Code
+2. Install "Live Server" extension
+3. Right-click index.html -> "Open with Live Server"
+
+🎯 WEBSITE FEATURES:
+
+✨ DESIGN:
+- Modern gradient color scheme
+- Glassmorphism navigation bar
+- Smooth animations and transitions
+- Responsive design (desktop, tablet, mobile)
+- Project cards with hover effects
+
+⚡ INTERACTIVITY:
+- Project filtering (All, SaaS, iOS, Collaboration)
+- Smooth scrolling navigation
+- Active section highlighting
+- Contact form with validation
+- Back to top button
+- Keyboard shortcuts (H=Home, C=Contact)
+
+📱 SECTIONS:
+1. Hero - Introduction with stats
+2. About - Entrepreneur philosophy + skills
+3. Projects - Filterable portfolio grid
+4. Services - What I offer
+5. Contact - Form and contact info
+
+🔗 PROJECT LINKS INCLUDED:
+- Powernutrievolution: https://github.com/LeoSimonn/powernutrievolution
+- ZapNutri: https://github.com/LeoSimonn/zapnutri
+- LoveMini: https://github.com/LeoSimonn/lovemini
+- Rio Sparkle Dashboards: https://github.com/LeoSimonn/rio-sparkle-dashboards
+- Bolsofy: https://www.bolsofy.com/
+- InsightUp: https://github.com/LeoSimonn/insightup
+- Clairfy: https://clairfy.netlify.app/
+- LensCam: https://lenscam.netlify.app/
+- Coffee Overflow: https://coffeeoverflow.lovable.app
+- TD Challenge: https://github.com/diogopcam/td-challenge
+- RetroTrip: https://github.com/MarquIln/RetroTrip
+
+💡 CUSTOMIZATION TIPS:
+- Edit colors in styles.css (CSS variables section)
+- Update projects in index.html (projects-grid section)
+- Change text content throughout the HTML
+- Modify animations in script.js
+
+🎯 QUICK TEST:
+After running the server, try:
+- Scrolling down to see animations
+- Clicking "SaaS & Web" filter button
+- Scrolling to contact section and filling the form
+- Pressing 'H' to go back to home
+
+The website is fully functional and ready to use!

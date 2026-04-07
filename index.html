@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="Leonardo Monteiro — UI/UX Designer, AI Automation Specialist & Founder at Autobotics. Products with purpose, usability, and performance.">
+  <title>Leonardo Monteiro | UI/UX · AI Automation · Founder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">LM</div>
+      <div class="loader-track"><span class="loader-fill"></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <a href="#hero" class="nav-logo"><span class="nav-logo-text">LM</span></a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="#contact" class="btn btn-primary nav-cta"><span class="btn-shine"></span>Get in Touch</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-container"><div class="hero-content">
+      <div class="hero-badge reveal"><span class="badge-dot"></span>Available for new projects</div>
+      <h1 class="hero-title">
+        <span class="hero-row reveal"><span class="hero-name">Leonardo</span></span>
+        <span class="hero-row reveal"><span class="hero-name gradient-text">Monteiro</span></span>
+        <span class="hero-row reveal"><span class="hero-role">UI/UX Designer · AI Automation</span></span>
+        <span class="hero-row reveal"><span class="hero-role">Founder at <a href="https://autobotics.com.br" target="_blank">Autobotics</a></span></span>
+      </h1>
+      <p class="hero-tagline reveal">Products with purpose, usability, and performance. I transform businesses into memorable experiences by combining design thinking with intelligent automation.</p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary btn-lg"><span class="btn-shine"></span>View Projects <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost btn-lg">Let's Talk <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+           <span class="stat-number-wrap"><span class="stat-number" data-target="120" data-suffix="+">0</span></span>
+          <span class="stat-label">3D Projects Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+           <span class="stat-number-wrap"><span class="stat-number" data-target="80" data-suffix="h">0</span></span>
+          <span class="stat-label">Saved / Month for Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+           <span class="stat-number-wrap"><span class="stat-number" data-target="60" data-suffix="%">0</span></span>
+          <span class="stat-label">Faster Response Time</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+           <span class="stat-number-wrap"><span class="stat-number" data-target="35" data-suffix="%">0</span></span>
+          <span class="stat-label">Production Increase</span>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span class="scroll-text">Scroll</span>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span class="marquee-item">UI/UX Design</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">AI & Automation</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Figma</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">n8n</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Low-Code Engineering</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">3D Visualization</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">SaaS Products</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">React</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Python</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">TypeScript</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Swift</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Framer</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Lovable</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Make</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Manychat</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">UI/UX Design</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">AI & Automation</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Figma</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">n8n</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Low-Code Engineering</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">3D Visualization</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">SaaS Products</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">React</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Python</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">TypeScript</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Swift</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Framer</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Lovable</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Make</span><span class="marquee-sep">✦</span>
+      <span class="marquee-item">Manychat</span><span class="marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ====== ABOUT - BENTO GRID ====== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">About Me</span>
+        <h2 class="section-title reveal">
+          Where <span class="gradient-text">design meets</span><br>
+          <span class="gradient-text">technology & ambition</span>
+        </h2>
+      </div>
+
+      <!-- Bento Layout: 3 columns on desktop -->
+      <div class="bento">
+
+        <!-- ROW 1: Wide intro (spans 3 cols) -->
+        <div class="bento-card bento-row-full reveal" data-tilt-card>
+          <div class="bento-intro">
+            <p class="intro-lead">
+              I'm an <strong>entrepreneur at heart</strong>, driven by the intersection of <span class="gradient-text">design, AI, and automation</span>. My mission: transform businesses into memorable experiences by building products with purpose, usability, and performance.
+            </p>
+            <p>
+              My journey began in childhood in a family immersed in design — from CorelDraw and Photoshop to SketchUp and Enscape. Today that foundation flows into <strong>Figma</strong> for UI/UX and <strong>low-code platforms</strong> like n8n, Make, and Lovable to ship products fast.
+            </p>
+          </div>
+        </div>
+
+        <!-- ROW 2: Apple (left, 2 cols) | PPG (right, 1 col) -->
+        <div class="bento-card bento-col-1 reveal" data-tilt-card>
+          <div class="bento-header">
+            <div class="bento-icon apple-bg"><i class="fab fa-apple"></i></div>
+            <span class="bento-badge">Current Role</span>
+          </div>
+          <h3 class="bento-title">UI/UX Designer Intern</h3>
+          <p class="bento-sub">Apple Developer Academy · PUCRS</p>
+          <p class="bento-desc">
+            I joined as <strong>UI/UX Designer Intern</strong> — despite already being a Software Engineering student with coding skills. I chose design intentionally because it's where my passion lives. At Apple I've absorbed world-class design thinking, human-centered methodology, and the legendary attention to detail that defines the brand. <strong>It's been transformative.</strong>
+          </p>
+          <div class="bento-tags">
+            <span class="tag">Figma</span><span class="tag">UX Research</span>
+            <span class="tag">SwiftUI</span><span class="tag">Prototyping</span>
+            <span class="tag">User Testing</span><span class="tag">Design Thinking</span>
+          </div>
+        </div>
+
+        <div class="bento-card bento-col-2 reveal" data-tilt-card>
+          <div class="bento-header">
+            <div class="bento-icon ppg-bg"><i class="fas fa-paint-roller"></i></div>
+            <span class="bento-badge">Real Impact</span>
+          </div>
+          <h3 class="bento-title">120+ Store Designs</h3>
+          <p class="bento-sub">Novaletra · Tintas Renner by PPG</p>
+          <p class="bento-desc">
+            Through <strong>Novaletra Comunicação Visual</strong>, I create 3D architectural visualizations for <strong>Tintas Renner</strong> — an iconic Brazilian paints brand acquired by <strong>PPG Industries</strong> (US global leader in coatings, based in Gravataí/RS).
+          </p>
+          <p class="bento-desc" style="margin-top:.75rem">
+            While 3D isn't my primary passion, the results speak for themselves: <strong>120+ stores launched</strong> and <strong>35% production increase</strong>.
+          </p>
+          <div class="bento-stats">
+            <div class="mini-stat"><div class="mini-num gradient-text">120+</div><div class="mini-label">Store Projects</div></div>
+            <div class="mini-stat"><div class="mini-num gradient-text">35%</div><div class="mini-label">Production Increase</div></div>
+          </div>
+        </div>
+
+        <!-- ROW 3: Autobotics (2 cols) | Entrepreneurship (1 col) -->
+        <div class="bento-card bento-col-1 reveal" data-tilt-card>
+          <div class="bento-header">
+            <div class="bento-icon ai-bg"><i class="fas fa-robot"></i></div>
+            <span class="bento-badge">Founder</span>
+          </div>
+          <h3 class="bento-title">AI & Automation</h3>
+          <p class="bento-sub">Autobotics</p>
+          <p class="bento-desc">
+            I connect n8n, Make, and Manychat to AI models — saving clients up to <strong>80 hours/month</strong>. This is where my passion for AI, automation, and entrepreneurship converge.
+          </p>
+          <p class="bento-desc" style="margin-top:.5rem">
+            I leverage Replit Agent and Lovable to ship MVPs in <strong>days</strong>, not months.
+          </p>
+          <div class="bento-tags">
+            <span class="tag">n8n</span><span class="tag">Make</span>
+            <span class="tag">Manychat</span><span class="tag">LLMs</span><span class="tag">Python</span>
+          </div>
+        </div>
+
+        <div class="bento-card bento-col-2 reveal" data-tilt-card>
+          <div class="bento-header">
+            <div class="bento-icon founder-bg"><i class="fas fa-wallet"></i></div>
+            <span class="bento-badge">Founder</span>
+          </div>
+          <h3 class="bento-title">Shipping Products</h3>
+          <p class="bento-sub">Not Just Ideas</p>
+          <p class="bento-desc">
+            Entrepreneurship isn't a job title — it's how I think. I've shipped <strong>6+ digital products</strong> from finance (Bolsofy) to AI tools (Clairfy) to communities (Coffee Overflow).
+          </p>
+          <div class="bento-stats">
+            <div class="mini-stat"><div class="mini-num gradient-text">6+</div><div class="mini-label">Products Shipped</div></div>
+            <div class="mini-stat"><div class="mini-num gradient-text">&lt;7d</div><div class="mini-label">MVP to Launch</div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Core Skills & Education — fora da bento -->
+      <div class="about-cards-row">
+        <div class="bento-card reveal" data-tilt-card>
+          <div class="bento-header">
+            <div class="bento-icon skills-bg"><i class="fas fa-layer-group"></i></div>
+            <span class="bento-badge">Toolkit</span>
+          </div>
+          <h3 class="bento-title">Core Skills</h3>
+          <div class="pill-grid">
+            <span class="pill"><i class="fas fa-palette"></i>UI/UX Design</span>
+            <span class="pill"><i class="fas fa-robot"></i>AI & Automation</span>
+            <span class="pill"><i class="fas fa-bolt"></i>Low-Code</span>
+            <span class="pill"><i class="fas fa-cube"></i>3D Visualization</span>
+            <span class="pill"><i class="fas fa-code"></i>Web Dev</span>
+            <span class="pill"><i class="fas fa-mobile-alt"></i>Swift / iOS</span>
+            <span class="pill"><i class="fas fa-server"></i>Python</span>
+            <span class="pill"><i class="fab fa-react"></i>React</span>
+            <span class="pill"><i class="fas fa-chart-line"></i>Strategy</span>
+          </div>
+        </div>
+        <div class="bento-card reveal" data-tilt-card>
+          <div class="bento-header">
+            <div class="bento-icon edu-bg"><i class="fas fa-graduation-cap"></i></div>
+            <h3 class="bento-title" style="margin:0">Education & Certifications</h3>
+          </div>
+          <div class="edu-grid edu-grid--about-card">
+            <div class="edu-item">
+              <span class="edu-icon"><i class="fas fa-graduation-cap"></i></span>
+              <div><strong>Software Engineering</strong><span>PUCRS · 2022 — 2026</span></div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-icon"><i class="fas fa-gamepad"></i></span>
+              <div><strong>Digital Games</strong><span>UniRitter · 2022 — 2024</span></div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-icon"><i class="fab fa-apple"></i></span>
+              <div><strong>Apple Certification</strong><span>Developer Academy</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== EXPERIENCE ====== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Experience</span>
+        <h2 class="section-title reveal">Where I've <span class="gradient-text">made impact</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div><h3>UI/UX Designer — Intern</h3>
+                <span class="timeline-company"><i class="fab fa-apple"></i> Apple Developer Academy | PUCRS</span>
+              </div>
+              <span class="timeline-date">Feb 2025 — Present</span>
+            </div>
+            <p class="timeline-desc">Refining human-centered design skills at Apple's premier academy. Crafting high-fidelity prototypes, conducting user research, and learning Apple's approach to world-class product design.</p>
+            <div class="timeline-tags"><span class="tag">Figma</span><span class="tag">UX Research</span><span class="tag">SwiftUI</span><span class="tag">Prototyping</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div><h3>Founder</h3><span class="timeline-company"><i class="fas fa-wallet"></i> Bolsofy</span></div>
+              <span class="timeline-date">May 2025 — Present</span>
+            </div>
+            <p class="timeline-desc">Building a personal finance management platform with budget tracking and financial insights. Focused on making money management intuitive and accessible for everyone.</p>
+            <div class="timeline-tags"><span class="tag">Vue.js</span><span class="tag">Firebase</span><span class="tag">Charts</span><span class="tag">Product Design</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div><h3>Founder</h3><span class="timeline-company"><i class="fas fa-robot"></i> Autobotics</span></div>
+              <span class="timeline-date">Sep 2024 — Present</span>
+            </div>
+            <p class="timeline-desc">AI automation consultancy connecting low-code platforms (n8n, Make, Manychat) to AI models. Saving clients up to 80 hours/month through intelligent chatbots and workflow optimization.</p>
+            <div class="timeline-tags"><span class="tag">n8n</span><span class="tag">Make</span><span class="tag">Manychat</span><span class="tag">LLMs</span><span class="tag">Python</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div><h3>3D & Graphic Designer</h3><span class="timeline-company"><i class="fas fa-cube"></i> Novaletra Comunicação Visual</span></div>
+              <span class="timeline-date">Dec 2021 — Present</span>
+            </div>
+            <p class="timeline-desc">Developing 3D architectural visualizations and commercial establishment projects from concept to high-quality renders. Delivered 120+ store projects for <strong>Tintas Renner by PPG</strong>, increasing production by 35%.</p>
+            <div class="timeline-tags"><span class="tag">SketchUp</span><span class="tag">Enscape</span><span class="tag">CorelDraw</span><span class="tag">Photoshop</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div><h3>Web Designer</h3><span class="timeline-company"><i class="fas fa-globe"></i> MEconecte</span></div>
+              <span class="timeline-date">Jun 2023 — Aug 2024</span>
+            </div>
+            <p class="timeline-desc">Designed and maintained interfaces for web and mobile platforms, ensuring usability and responsiveness. Focused on optimizing user experience and adapting to digital market trends.</p>
+            <div class="timeline-tags"><span class="tag">UI Design</span><span class="tag">Responsive</span><span class="tag">Mobile</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div><h3>Co-Founder</h3><span class="timeline-company"><i class="fas fa-handshake"></i> Free From Club</span></div>
+              <span class="timeline-date">Nov 2022 — Dec 2023</span>
+            </div>
+            <p class="timeline-desc">Brand design and app development with innovative, user-friendly screens. Website design and impactful visual content for social media.</p>
+            <div class="timeline-tags"><span class="tag">Brand Design</span><span class="tag">App Design</span><span class="tag">Social Media</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROJECTS ====== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Selected Work</span>
+        <h2 class="section-title reveal">Things I've <span class="gradient-text">brought to life</span></h2>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="saas">SaaS</button>
+        <button class="filter-btn" data-filter="ios">iOS</button>
+        <button class="filter-btn" data-filter="collab">Collaborations</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image" style="background: linear-gradient(135deg, #10b981, #047857);">
+            <div class="project-icon-wrap"><i class="fas fa-leaf"></i></div>
+            <div class="project-overlay"><a href="https://github.com/LeoSimonn/zapnutri" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div>
+          </div>
+          <div class="project-content">
+            <div class="project-head"><h3>ZapNutri</h3><span class="project-badge">SaaS</span></div>
+            <p>AI-powered nutrition platform with WhatsApp integration, meal planning, and progress tracking.</p>
+            <div class="project-tags"><span class="tag">Node.js</span><span class="tag">Supabase</span><span class="tag">OpenAI</span><span class="tag">WhatsApp</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+            <div class="project-icon-wrap"><i class="fas fa-wallet"></i></div>
+            <div class="project-overlay"><a href="https://www.bolsofy.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-content">
+            <div class="project-head"><h3>Bolsofy</h3><span class="project-badge">SaaS</span></div>
+            <p>Personal finance management platform with budget tracking, insights, and intuitive money management.</p>
+            <div class="project-tags"><span class="tag">Vue.js</span><span class="tag">Firebase</span><span class="tag">Charts</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+            <div class="project-icon-wrap"><i class="fas fa-magic"></i></div>
+            <div class="project-overlay"><a href="https://clairfy.netlify.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-content">
+            <div class="project-head"><h3>Clairfy</h3><span class="project-badge">SaaS</span></div>
+            <p>AI-powered content clarification and summarization tool for busy professionals who need clarity fast.</p>
+            <div class="project-tags"><span class="tag">React</span><span class="tag">OpenAI</span><span class="tag">Vercel</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image" style="background: linear-gradient(135deg, #92400e, #78350f);">
+            <div class="project-icon-wrap"><i class="fas fa-coffee"></i></div>
+            <div class="project-overlay"><a href="https://coffeeoverflow.lovable.app" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+          <div class="project-content">
+            <div class="project-head"><h3>Coffee Overflow</h3><span class="project-badge">SaaS</span></div>
+            <p>Q&A platform for coffee enthusiasts and professionals in the beverage industry community.</p>
+            <div class="project-tags"><span class="tag">React</span><span class="tag">Lovable</span><span class="tag">Supabase</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <div class="project-icon-wrap"><i class="fas fa-bolt"></i></div>
+            <div class="project-overlay"><a href="https://github.com/LeoSimonn/powernutrievolution" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div>
+          </div>
+          <div class="project-content">
+            <div class="project-head"><h3>PowerNutri Evolution</h3><span class="project-badge">SaaS</span></div>
+            <p>Complete nutritional management system with diet tracking, recipes, and health analytics dashboard.</p>
+            <div class="project-tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+            <div class="project-icon-wrap"><i class="fas fa-lightbulb"></i></div>
+            <div class="project-overlay"><a href="https://github.com/LeoSimonn/insightup" target="_blank" class="project-link"><i class="fab fa-github"></i></a></div>
+          </div>
+          <div class="project-content">
+            <div class="project-head"><h3>InsightUp</h3><span class="project-badge">SaaS</span></div>
+            <p>Idea management and innovation tracking platform for teams to capture and organize creativity.</p>
+            <div class="project-tags"><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Prisma</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES ====== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Services</span>
+        <h2 class="section-title reveal">What I <span class="gradient-text">bring to the table</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal tilt-card">
+          <div class="service-number">01</div>
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3>Product Design</h3>
+          <p>End-to-end design from research to launch — obsessive attention to usability.</p>
+          <ul class="service-list">
+            <li>UX Research & Strategy</li>
+            <li>UI Design & Prototyping</li>
+            <li>Design Systems</li>
+            <li>Usability Testing</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal tilt-card">
+          <div class="service-number">02</div>
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI & Automation</h3>
+          <p>Intelligent systems that save 80+ hours per month in client workflows.</p>
+          <ul class="service-list">
+            <li>LLM Integration</li>
+            <li>Workflow Automation (n8n)</li>
+            <li>Chatbot Development</li>
+            <li>Data Processing Pipelines</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal tilt-card">
+          <div class="service-number">03</div>
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Web & Mobile Dev</h3>
+          <p>Production-ready apps from MVP to scale.</p>
+          <ul class="service-list">
+            <li>Web Applications</li>
+            <li>iOS Apps (Swift)</li>
+            <li>API Development</li>
+            <li>Cloud Deployment</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal tilt-card">
+          <div class="service-number">04</div>
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Strategy & Consulting</h3>
+          <p>Technical strategy, product roadmap, and rapid low-code prototyping.</p>
+          <ul class="service-list">
+            <li>Technical Strategy</li>
+            <li>Product Roadmap</li>
+            <li>MVP Development</li>
+            <li>3D Visualization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== CONTACT ====== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Contact</span>
+        <h2 class="section-title reveal">Let's work<br><span class="gradient-text">together</span></h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <p class="contact-desc">If you're looking to optimize your digital products or build automations that truly convert — let's talk. I'm always open to discussing new projects and creative ideas.</p>
+
+          <div class="contact-links">
+            <a href="mailto:leo.simonmonteiro@gmail.com" class="contact-link">
+              <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+              <div><div class="contact-link-label">Email</div><div class="contact-link-value">leo.simonmonteiro@gmail.com</div></div>
+            </a>
+            <a href="https://autobotics.com.br" target="_blank" class="contact-link">
+              <div class="contact-link-icon"><i class="fas fa-globe"></i></div>
+              <div><div class="contact-link-label">Company</div><div class="contact-link-value">autobotics.com.br</div></div>
+            </a>
+            <a href="https://wa.me/5551993491445" target="_blank" class="contact-link whatsapp-link">
+              <div class="contact-link-icon"><i class="fab fa-whatsapp"></i></div>
+              <div><div class="contact-link-label">WhatsApp</div><div class="contact-link-value">+55 51 99349-1445</div></div>
+            </a>
+          </div>
+
+          <div class="socials">
+            <a href="https://github.com/LeoSimonn" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/leonardosimon" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://autobotics.com.br" target="_blank" class="social-link" aria-label="Website"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg"><span class="btn-shine"></span>Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. Products with purpose, usability, and performance.</p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
