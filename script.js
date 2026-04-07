@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => { if (loader) loader.classList.add('hidden'); }, 1800);
 
   initNav();
-  initMobileMenu();
   initScrollReveal();
   initScrollProgress();
   initProjectFilter();
@@ -40,35 +39,6 @@ function initNav() {
     });
   }
   window.addEventListener('scroll', () => requestAnimationFrame(update));
-}
-
-/* ============================================================ */
-/* MOBILE MENU                                                     */
-/* ============================================================ */
-function initMobileMenu() {
-  const btn = document.getElementById('mobileToggle');
-  const nav = document.getElementById('nav');
-  const menu = nav?.querySelector('.nav-links');
-  if (!btn || !nav || !menu) return;
-
-  const spans = btn.querySelectorAll('span');
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('open');
-    nav.classList.toggle('menu-open');
-    spans[0].style.transform = btn.classList.contains('open') ? 'rotate(45deg) translate(5px,5px)' : 'none';
-    spans[1].style.opacity = btn.classList.contains('open') ? '0' : '1';
-    spans[2].style.transform = btn.classList.contains('open') ? 'rotate(-45deg) translate(5px,-5px)' : 'none';
-  });
-
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      btn.classList.remove('open');
-      nav.classList.remove('menu-open');
-      spans[0].style.transform = 'none';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = 'none';
-    });
-  });
 }
 
 /* ============================================================ */
@@ -133,8 +103,9 @@ function initProjectFilter() {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       cards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
+        const cat = card.getAttribute('data-category') || '';
+        const cats = cat.trim().split(/\s+/).filter(Boolean);
+        if (filter === 'all' || cats.includes(filter)) {
           card.style.display = '';
           requestAnimationFrame(() => {
             card.style.opacity = '1';

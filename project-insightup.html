@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InsightUp — solo iOS app for entrepreneurs: capture ideas, get AI-backed feasibility and next steps. Leonardo Monteiro: product, UX/UI, Swift/SwiftUI.">
+  <title>InsightUp | Leonardo Monteiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="project-detail.css?v=1">
+</head>
+<body class="project-page">
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">LM</div>
+      <div class="loader-track"><span class="loader-fill"></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-text">LM</span></a>
+      <div class="nav-links">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary nav-cta"><span class="btn-shine"></span>Get in Touch</a>
+    </div>
+  </nav>
+
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+  <main class="project-detail" id="top">
+    <div class="container project-detail-inner">
+      <a href="index.html#projects" class="project-detail-back reveal"><i class="fas fa-arrow-left"></i> Back to projects</a>
+
+      <header class="project-detail-hero reveal">
+        <span class="project-detail-tag">iOS - AI &amp; Ideation</span>
+        <h1 class="project-detail-title">InsightUp</h1>
+        <p class="project-detail-lead">Turn scattered ideas into decisions: capture a thought on the go and get a concise AI report on feasibility, effort, time, resources, and suggested next steps.</p>
+        <div class="project-detail-external">
+          <a href="https://github.com/LeoSimonn/insightup" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </header>
+
+      <article class="project-detail-body">
+        <section class="project-detail-section reveal">
+          <h2>Context</h2>
+          <p>InsightUp was built at the <strong>Apple Developer Academy</strong> as my <strong>only solo project</strong>. Every other Academy app I worked on shipped in a five-person, cross-functional team using <strong>SCRUM</strong> — here I owned the full path from problem framing to implementation.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Problem</h2>
+          <p>Young entrepreneurs often run on tight schedules and generate ideas throughout the day, but lack a lightweight way to <strong>organize, validate, and prioritize</strong> those ideas. Notes pile up; trade-offs stay fuzzy; momentum fades before anything ships.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Solution</h2>
+          <p>InsightUp focuses the journey from spark to clarity: after the user records an idea, the app uses <strong>AI</strong> to produce a structured, fast readout — viability, estimated effort and time, possible resources, and <strong>actionable next steps</strong> — so abstract thoughts become something you can compare and act on.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>My role &amp; impact</h2>
+          <p>As a solo owner I defined product strategy, UX flows, and visual language, then shipped the experience in <strong>Swift</strong> and <strong>SwiftUI</strong> so design intent stayed aligned with what users actually get in the app.</p>
+          <ul class="project-detail-list">
+            <li><strong>Product &amp; UX:</strong> Framed the core loop (capture → AI insight → prioritization) around a real user pain, not feature sprawl.</li>
+            <li><strong>Design execution:</strong> Built interfaces and flows that stay clear under time pressure — the primary use case is “busy, on the move.”</li>
+            <li><strong>AI in the product:</strong> Integrated AI as a decision support layer (analysis and suggestions), not a gimmick.</li>
+            <li><strong>End-to-end delivery:</strong> Connected research, UI, and code so trade-offs were explicit and the shipped app reflected the original vision.</li>
+          </ul>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Process &amp; stack</h2>
+          <ul class="project-detail-list">
+            <li><strong>Design &amp; prototyping:</strong> Figma — flows, UI, and iteration before implementation.</li>
+            <li><strong>Build:</strong> Swift, SwiftUI (primary), UIKit where needed for specific behaviors.</li>
+            <li><strong>Ways of working:</strong> Academy SCRUM cadence for other projects; here, self-directed milestones with the same rigor on scope and clarity.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. <a href="index.html" style="color:var(--accent);text-decoration:none;">Back to portfolio</a></p>
+      <a href="#top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

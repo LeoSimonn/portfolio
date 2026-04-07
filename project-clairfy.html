@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clairfy — doctor–patient communication with AI summaries at two language levels. Leonardo Monteiro: UI/UX design and Product Owner at the Apple Developer Academy.">
+  <title>Clairfy | Leonardo Monteiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="project-detail.css?v=1">
+</head>
+<body class="project-page">
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">LM</div>
+      <div class="loader-track"><span class="loader-fill"></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-text">LM</span></a>
+      <div class="nav-links">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary nav-cta"><span class="btn-shine"></span>Get in Touch</a>
+    </div>
+  </nav>
+
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+  <main class="project-detail" id="top">
+    <div class="container project-detail-inner">
+      <a href="index.html#projects" class="project-detail-back reveal"><i class="fas fa-arrow-left"></i> Back to projects</a>
+
+      <header class="project-detail-hero reveal">
+        <span class="project-detail-tag">iOS - Health</span>
+        <h1 class="project-detail-title">Clairfy</h1>
+        <p class="project-detail-lead">Improve what happens after the visit: record the consultation, let AI produce structured summaries, and give clinicians and patients the same story in the language each one needs.</p>
+        <div class="project-detail-external">
+          <a href="https://apps.apple.com/br/app/clairfy/id6747406139?l=en-GB" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-apple"></i> App Store</a>
+          <a href="https://clairfy.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Landing page</a>
+          <a href="https://github.com/AndreiRech/Clairfy" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </header>
+
+      <article class="project-detail-body">
+        <section class="project-detail-section reveal">
+          <h2>Context</h2>
+          <p>Clairfy was developed at the <strong>Apple Developer Academy</strong> in a <strong>five-person</strong> team. We worked in <strong>SCRUM</strong> sprints with clear priorities, regular checkpoints with mentors, and tight collaboration between design and engineering.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Problem</h2>
+          <p>Clinical visits are dense: it is hard to capture <strong>everything</strong> that was said while ensuring the patient <strong>understands</strong> follow-up instructions. Miscommunication and forgotten details undermine trust and outcomes — especially after the appointment ends.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Solution</h2>
+          <p>The app records the visit and uses <strong>AI</strong> to generate structured summaries with key points and <strong>action items</strong>. A core differentiator is dual presentation: a <strong>more technical</strong> view for healthcare professionals and a <strong>simpler, patient-friendly</strong> view — same underlying content, tuned for comprehension on each side.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>My role &amp; impact</h2>
+          <p>I worked as <strong>UI/UX designer</strong> and <strong>Product Owner</strong>, connecting experience design with product direction and delivery.</p>
+          <ul class="project-detail-list">
+            <li><strong>Design:</strong> Shaped flows and interfaces for recording, review, and reading summaries with clarity and empathy under sensitive context.</li>
+            <li><strong>Product Owner:</strong> Helped prioritize features, align scope with the team, and keep user needs, clinical clarity, and engineering trade-offs visible in decisions.</li>
+            <li><strong>AI:</strong> Contributed strategic thinking on how AI should support the product — not as a black box, but as a trustworthy layer aligned with clinical and patient goals; helped teammates reason about useful vs. risky applications.</li>
+            <li><strong>Build bridge:</strong> Supported implementation in focused areas so UX decisions survived in the shipped app.</li>
+          </ul>
+          <div class="project-detail-team"><strong>Team:</strong> Pablo Garcia, Bernardo Garcia, Eduardo Ferrari, and Andrei Rech.</div>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Process &amp; stack</h2>
+          <ul class="project-detail-list">
+            <li><strong>Design:</strong> Figma for flows, UI, and prototypes; Keynote for narrative and checkpoints.</li>
+            <li><strong>Collaboration:</strong> Airtable and Zoom for planning and alignment; SCRUM for delivery rhythm.</li>
+            <li><strong>Development:</strong> Swift, SwiftUI (primary), UIKit where the experience required it.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. <a href="index.html" style="color:var(--accent);text-decoration:none;">Back to portfolio</a></p>
+      <a href="#top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

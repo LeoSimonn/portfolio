@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RetroTrip — educational 3D quiz game rooted in history. Leonardo Monteiro: UI/UX design and Product Owner at the Apple Developer Academy.">
+  <title>RetroTrip | Leonardo Monteiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="project-detail.css?v=1">
+</head>
+<body class="project-page">
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">LM</div>
+      <div class="loader-track"><span class="loader-fill"></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-text">LM</span></a>
+      <div class="nav-links">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary nav-cta"><span class="btn-shine"></span>Get in Touch</a>
+    </div>
+  </nav>
+
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+  <main class="project-detail" id="top">
+    <div class="container project-detail-inner">
+      <a href="index.html#projects" class="project-detail-back reveal"><i class="fas fa-arrow-left"></i> Back to projects</a>
+
+      <header class="project-detail-hero reveal">
+        <span class="project-detail-tag">iOS - Education &amp; History</span>
+        <h1 class="project-detail-title">RetroTrip</h1>
+        <p class="project-detail-lead">A history learning game that pairs immersive 3D scenes with observation-driven quizzes — notice the moment, then prove what you saw.</p>
+        <div class="project-detail-external">
+          <a href="https://apps.apple.com/br/app/retrotrip/id6752355019?l=en-GB" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-apple"></i> App Store</a>
+          <a href="https://github.com/MarquIln/RetroTrip" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </header>
+
+      <article class="project-detail-body">
+        <section class="project-detail-section reveal">
+          <h2>Context</h2>
+          <p>RetroTrip was created at the <strong>Apple Developer Academy</strong> in a <strong>five-person</strong> team. We used <strong>SCRUM</strong> to pace exploration-heavy work — balancing creative direction, 3D experience, and a ship-ready iOS build.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Problem</h2>
+          <p>Traditional quiz formats can feel detached from the past they describe. Learners need more than facts on a flashcard — they need <strong>context, curiosity, and memory cues</strong> that stick. The design question was how to make history feel present without drowning players in noise.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Solution</h2>
+          <p>Players enter a 3D scene inspired by a historical moment and have a short window to absorb <strong>visual and audio detail</strong> before answering questions tied to that context. The loop rewards <strong>observation</strong> and <strong>recall</strong> — immersion, interaction, and assessment work together.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>My role &amp; impact</h2>
+          <p>I served as <strong>UI/UX designer</strong> and <strong>Product Owner</strong>, aligning player experience with what the team could ship on schedule.</p>
+          <ul class="project-detail-list">
+            <li><strong>Design:</strong> Structured how the player reads the scene, receives feedback, and stays oriented — UI and communication that support focus, not distraction.</li>
+            <li><strong>Product Owner:</strong> Helped set priorities, clarify the product narrative, and keep concept, UX, and development aligned when scope competed with ambition.</li>
+            <li><strong>Collaboration:</strong> Facilitated trade-offs between immersion depth and clarity of learning goals.</li>
+            <li><strong>Code &amp; AI:</strong> Contributed in targeted implementation areas; shared AI-related perspective with the team to inform creative and technical choices.</li>
+          </ul>
+          <div class="project-detail-team"><strong>Team:</strong> Antônio Costa, Alex Fraga, Marcos Raach, and Eduardo Fensterseifer.</div>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Process &amp; stack</h2>
+          <ul class="project-detail-list">
+            <li><strong>Design:</strong> Figma for flows and UI; Keynote for storytelling and reviews.</li>
+            <li><strong>Team rhythm:</strong> SCRUM, Airtable, and Zoom for planning and sync.</li>
+            <li><strong>Development:</strong> Swift, SwiftUI, UIKit where required for game-specific UI or integration.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. <a href="index.html" style="color:var(--accent);text-decoration:none;">Back to portfolio</a></p>
+      <a href="#top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

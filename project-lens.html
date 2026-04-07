@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lens — analog-inspired photography on iPhone with develop flow and gallery wall. Leonardo Monteiro: UI/UX at the Apple Developer Academy.">
+  <title>Lens | Leonardo Monteiro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="project-detail.css?v=1">
+</head>
+<body class="project-page">
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">LM</div>
+      <div class="loader-track"><span class="loader-fill"></span></div>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-text">LM</span></a>
+      <div class="nav-links">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary nav-cta"><span class="btn-shine"></span>Get in Touch</a>
+    </div>
+  </nav>
+
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+  <main class="project-detail" id="top">
+    <div class="container project-detail-inner">
+      <a href="index.html#projects" class="project-detail-back reveal"><i class="fas fa-arrow-left"></i> Back to projects</a>
+
+      <header class="project-detail-hero reveal">
+        <span class="project-detail-tag">iOS - Photography</span>
+        <h1 class="project-detail-title">Lens</h1>
+        <p class="project-detail-lead">Bring the ritual of instant film to the iPhone: shoot, wait, develop — then curate a wall that treats each frame as something worth keeping.</p>
+        <div class="project-detail-external">
+          <a href="https://apps.apple.com/br/app/lens/id6756274876?l=en-GB" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-apple"></i> App Store</a>
+          <a href="https://lenscam.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Landing page</a>
+          <a href="https://github.com/diogopcam/td-challenge" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </header>
+
+      <article class="project-detail-body">
+        <section class="project-detail-section reveal">
+          <h2>Context</h2>
+          <p>Lens was built at the <strong>Apple Developer Academy</strong> in a <strong>five-person</strong> team. We followed <strong>SCRUM</strong>, iterating on a highly sensory experience where small interaction details were as important as screen layout.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Problem</h2>
+          <p>Phone photography often trains <strong>volume over attachment</strong> — endless shots, little sense of occasion. The product question was how to restore <strong>anticipation, scarcity, and emotional weight</strong> to a single frame without feeling gimmicky.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Solution</h2>
+          <p>Lens borrows from instant cameras: capture is only part of the story. <strong>Sound, haptics, texture, motion, and 3D elements</strong> shape a slower, more intentional loop. After shooting, the user <strong>develops</strong> the image and places it on a <strong>digital gallery wall</strong> — memory as an object, not a file in an endless roll.</p>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>My role &amp; impact</h2>
+          <p>I was <strong>UI/UX designer</strong>, focused on interaction quality and coherence between the nostalgic promise and the actual feel of the app.</p>
+          <ul class="project-detail-list">
+            <li><strong>Sensory UX:</strong> Helped define how feedback (audio, haptics, animation) reinforced emotion and pacing — not decoration, but meaning.</li>
+            <li><strong>Interface &amp; IA:</strong> Kept navigation and states legible while the experience stayed atmospheric; clarity where users need control, restraint where mood does the work.</li>
+            <li><strong>Product coherence:</strong> Guarded consistency between the “instant camera” metaphor and every screen users touch.</li>
+            <li><strong>Build &amp; AI:</strong> Supported targeted implementation work; contributed AI-related ideas in team discussions where they could strengthen the product story.</li>
+          </ul>
+          <div class="project-detail-team"><strong>Team:</strong> Diogo Camargo, Fernanda Uberti, Gabriel Barbosa, and Bruna Marschner.</div>
+        </section>
+
+        <section class="project-detail-section reveal">
+          <h2>Process &amp; stack</h2>
+          <ul class="project-detail-list">
+            <li><strong>Design:</strong> Figma for structure and UI; Keynote for narrative.</li>
+            <li><strong>Collaboration:</strong> SCRUM, Airtable, Zoom — tight loops on a detail-heavy product.</li>
+            <li><strong>Development:</strong> Swift, SwiftUI, UIKit when native components or integration demanded it.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. <a href="index.html" style="color:var(--accent);text-decoration:none;">Back to portfolio</a></p>
+      <a href="#top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>
