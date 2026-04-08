@@ -202,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loader) loader.classList.add('hidden');
   }, 1800);
 
+  initHamburger();
   initNav();
   initScrollReveal();
   initScrollProgress();
@@ -210,6 +211,37 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initTiltCards();
 });
+
+/* ============================================================ */
+/* HAMBURGER MENU                                                 */
+/* ============================================================ */
+function initHamburger() {
+  const btn = document.getElementById('navHamburger');
+  const links = document.getElementById('navLinks');
+  if (!btn || !links) return;
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    links.classList.toggle('open', !open);
+  });
+
+  // Close on link click
+  links.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.setAttribute('aria-expanded', 'false');
+      links.classList.remove('open');
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !links.contains(e.target)) {
+      btn.setAttribute('aria-expanded', 'false');
+      links.classList.remove('open');
+    }
+  });
+}
 
 /* ============================================================ */
 /* NAVIGATION                                                     */
