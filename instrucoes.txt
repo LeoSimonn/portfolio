@@ -58,8 +58,7 @@ Method 3 - VS Code Live Server:
 5. Contact - Form and contact info
 
 🔗 PROJECT LINKS INCLUDED:
-- Powernutrievolution: https://github.com/LeoSimonn/powernutrievolution
-- ZapNutri: https://github.com/LeoSimonn/zapnutri
+- PowerNutri Evolution (current): https://github.com/LeoSimonn/powernutrievolution — formerly ZapNutri; early codebase: https://github.com/LeoSimonn/zapnutri
 - LoveMini: https://github.com/LeoSimonn/lovemini
 - Rio Sparkle Dashboards: https://github.com/LeoSimonn/rio-sparkle-dashboards
 - Bolsofy: https://www.bolsofy.com/

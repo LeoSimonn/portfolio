@@ -50,6 +50,17 @@ body.project-page {
   margin-bottom: 1rem;
 }
 
+.project-detail-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text2);
+  letter-spacing: 0.02em;
+}
+.project-detail-eyebrow strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .project-detail-title {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 5vw, 2.75rem);
