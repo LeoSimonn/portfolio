@@ -199,6 +199,12 @@ window.PORTFOLIO_I18N = {
       submit: 'Send Message',
       sending: 'Sending...',
       sent: 'Message Sent!',
+      githubAria: 'Open GitHub profile',
+      githubLabel: 'GitHub',
+      githubValue: '@LeoSimonn',
+      linkedinAria: 'Open LinkedIn profile',
+      linkedinLabel: 'LinkedIn',
+      linkedinValue: 'in/leonardosimon',
     },
     footer: {
       textHtml:
@@ -402,6 +408,12 @@ window.PORTFOLIO_I18N = {
       submit: 'Enviar mensagem',
       sending: 'Enviando...',
       sent: 'Mensagem enviada!',
+      githubAria: 'Abrir perfil no GitHub',
+      githubLabel: 'GitHub',
+      githubValue: '@LeoSimonn',
+      linkedinAria: 'Abrir perfil no LinkedIn',
+      linkedinLabel: 'LinkedIn',
+      linkedinValue: 'in/leonardosimon',
     },
     footer: {
       textHtml:

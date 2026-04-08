@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -33,9 +33,9 @@
   <nav class="nav" id="nav">
     <div class="nav-content">
       <div class="nav-links">
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
         <a href="#experience" class="nav-link" data-i18n="nav.work">Work</a>
-        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
         <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
       </div>
       <div class="nav-tools" role="toolbar" data-i18n-aria="nav.toolsToolbarAria" aria-label="Appearance and language">
@@ -139,6 +139,116 @@
       <span class="marquee-item">Manychat</span><span class="marquee-sep">✦</span>
     </div>
   </div>
+
+  <!-- ====== PROJECTS ====== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal" data-i18n="projects.tag">Selected Work</span>
+        <h2 class="section-title reveal" data-i18n-html="projects.titleHtml">Things I've <span class="gradient-text">brought to life</span></h2>
+      </div>
+
+      <p class="projects-lead reveal" data-i18n-html="projects.leadHtml">
+        At the <strong>Apple Developer Academy</strong>, I shipped native iOS apps in Swift &amp; SwiftUI — solo on <strong>InsightUp</strong>, and in five-person teams on the rest. Below: Academy work first, then web &amp; SaaS products. <strong>Click a card</strong> to open the full case study; hover the preview for the link hint.
+      </p>
+
+      <div class="filter-bar reveal">
+        <button type="button" class="filter-btn active" data-filter="all" data-i18n="projects.fAll">All</button>
+        <button type="button" class="filter-btn" data-filter="saas" data-i18n="projects.fSaas">SaaS</button>
+        <button type="button" class="filter-btn" data-filter="ios" data-i18n="projects.fIos">iOS · Academy</button>
+        <button type="button" class="filter-btn" data-filter="collab" data-i18n="projects.fCollab">Collaborations</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Apple Developer Academy — native iOS -->
+        <article class="project-card reveal" data-category="ios">
+          <div class="project-image project-image--solid" style="--project-surface: #0d5f7a;">
+            <div class="project-icon-wrap"><i class="fas fa-lightbulb"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">InsightUp</h3>
+            <p class="project-card-lead" data-i18n="projects.insightLead">Solo build: capture ideas, get AI-backed feasibility and next steps.</p>
+            <div class="project-tags"><span class="tag tag--stack">iOS - AI &amp; Ideation</span></div>
+          </div>
+          <a href="project-insightup.html" class="project-card-hit" aria-label="InsightUp — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+
+        <article class="project-card reveal" data-category="ios collab">
+          <div class="project-image project-image--solid" style="--project-surface: #1d4ed8;">
+            <div class="project-icon-wrap"><i class="fas fa-heartbeat"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">Clairfy</h3>
+            <p class="project-card-lead" data-i18n="projects.clairfyLead">UI/UX &amp; PO: visit audio, AI summaries, two language levels.</p>
+            <div class="project-tags"><span class="tag tag--stack">iOS - Health</span></div>
+          </div>
+          <a href="project-clairfy.html" class="project-card-hit" aria-label="Clairfy — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+
+        <article class="project-card reveal" data-category="ios collab">
+          <div class="project-image project-image--solid" style="--project-surface: #1e40af;">
+            <div class="project-icon-wrap"><i class="fas fa-landmark"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">RetroTrip</h3>
+            <p class="project-card-lead" data-i18n="projects.retroLead">UI/UX &amp; PO: 3D history scenes + observation quiz loop.</p>
+            <div class="project-tags"><span class="tag tag--stack">iOS - Education &amp; History</span></div>
+          </div>
+          <a href="project-retrotrip.html" class="project-card-hit" aria-label="RetroTrip — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+
+        <article class="project-card reveal" data-category="ios collab">
+          <div class="project-image project-image--solid" style="--project-surface: #0c4a6e;">
+            <div class="project-icon-wrap"><i class="fas fa-camera-retro"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">Lens</h3>
+            <p class="project-card-lead" data-i18n="projects.lensLead">Analog-inspired capture: develop, haptics, gallery wall.</p>
+            <div class="project-tags"><span class="tag tag--stack">iOS - Photography</span></div>
+          </div>
+          <a href="project-lens.html" class="project-card-hit" aria-label="Lens — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+
+        <article class="project-card reveal" data-category="ios collab">
+          <div class="project-image project-image--solid" style="--project-surface: #153a52;">
+            <div class="project-icon-wrap"><i class="fas fa-coffee"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">Coffee Overflow</h3>
+            <p class="project-card-lead" data-i18n="projects.coffeeLead">Physics stacking rhythm game — identity, clarity, pace.</p>
+            <div class="project-tags"><span class="tag tag--stack">iOS - Game</span></div>
+          </div>
+          <a href="project-coffeeoverflow.html" class="project-card-hit" aria-label="Coffee Overflow — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+
+        <!-- Web & SaaS -->
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image project-image--solid" style="--project-surface: #1a4d66;">
+            <div class="project-icon-wrap"><i class="fas fa-wallet"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">Bolsofy</h3>
+            <div class="project-tags"><span class="tag tag--stack">Vue.js - Personal Finance</span></div>
+          </div>
+          <a href="project-bolsofy.html" class="project-card-hit" aria-label="Bolsofy — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+
+        <article class="project-card reveal" data-category="saas">
+          <div class="project-image project-image--solid" style="--project-surface: #0f3d52;">
+            <div class="project-icon-wrap"><i class="fas fa-bolt"></i></div>
+          </div>
+          <div class="project-content project-content--minimal">
+            <h3 class="project-card-title">PowerNutri Evolution</h3>
+            <p class="project-card-lead" data-i18n="projects.powerLead">Formerly ZapNutri — nutrition end to end, from WhatsApp-era roots to a full web app.</p>
+            <div class="project-tags"><span class="tag tag--stack">React - Nutrition &amp; Health</span></div>
+          </div>
+          <a href="project-powernutri.html" class="project-card-hit" aria-label="PowerNutri Evolution (formerly ZapNutri) — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- ====== ABOUT - BENTO GRID ====== -->
   <section class="section" id="about">
@@ -391,114 +501,6 @@
     </div>
   </section>
 
-  <!-- ====== PROJECTS ====== -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag reveal" data-i18n="projects.tag">Selected Work</span>
-        <h2 class="section-title reveal" data-i18n-html="projects.titleHtml">Things I've <span class="gradient-text">brought to life</span></h2>
-      </div>
-
-      <p class="projects-lead reveal" data-i18n-html="projects.leadHtml">
-        At the <strong>Apple Developer Academy</strong>, I shipped native iOS apps in Swift &amp; SwiftUI — solo on <strong>InsightUp</strong>, and in five-person teams on the rest. Below: Academy work first, then web &amp; SaaS products. <strong>Click a card</strong> to open the full case study; hover the preview for the link hint.
-      </p>
-
-      <div class="filter-bar reveal">
-        <button type="button" class="filter-btn active" data-filter="all" data-i18n="projects.fAll">All</button>
-        <button type="button" class="filter-btn" data-filter="saas" data-i18n="projects.fSaas">SaaS</button>
-        <button type="button" class="filter-btn" data-filter="ios" data-i18n="projects.fIos">iOS · Academy</button>
-        <button type="button" class="filter-btn" data-filter="collab" data-i18n="projects.fCollab">Collaborations</button>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Apple Developer Academy — native iOS -->
-        <article class="project-card reveal" data-category="ios">
-          <div class="project-image project-image--solid" style="--project-surface: #0d5f7a;">
-            <div class="project-icon-wrap"><i class="fas fa-lightbulb"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">InsightUp</h3>
-            <p class="project-card-lead" data-i18n="projects.insightLead">Solo build: capture ideas, get AI-backed feasibility and next steps.</p>
-            <div class="project-tags"><span class="tag tag--stack">iOS - AI &amp; Ideation</span></div>
-          </div>
-          <a href="project-insightup.html" class="project-card-hit" aria-label="InsightUp — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-
-        <article class="project-card reveal" data-category="ios collab">
-          <div class="project-image project-image--solid" style="--project-surface: #1d4ed8;">
-            <div class="project-icon-wrap"><i class="fas fa-heartbeat"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">Clairfy</h3>
-            <p class="project-card-lead" data-i18n="projects.clairfyLead">UI/UX &amp; PO: visit audio, AI summaries, two language levels.</p>
-            <div class="project-tags"><span class="tag tag--stack">iOS - Health</span></div>
-          </div>
-          <a href="project-clairfy.html" class="project-card-hit" aria-label="Clairfy — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-
-        <article class="project-card reveal" data-category="ios collab">
-          <div class="project-image project-image--solid" style="--project-surface: #1e40af;">
-            <div class="project-icon-wrap"><i class="fas fa-landmark"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">RetroTrip</h3>
-            <p class="project-card-lead" data-i18n="projects.retroLead">UI/UX &amp; PO: 3D history scenes + observation quiz loop.</p>
-            <div class="project-tags"><span class="tag tag--stack">iOS - Education &amp; History</span></div>
-          </div>
-          <a href="project-retrotrip.html" class="project-card-hit" aria-label="RetroTrip — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-
-        <article class="project-card reveal" data-category="ios collab">
-          <div class="project-image project-image--solid" style="--project-surface: #0c4a6e;">
-            <div class="project-icon-wrap"><i class="fas fa-camera-retro"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">Lens</h3>
-            <p class="project-card-lead" data-i18n="projects.lensLead">Analog-inspired capture: develop, haptics, gallery wall.</p>
-            <div class="project-tags"><span class="tag tag--stack">iOS - Photography</span></div>
-          </div>
-          <a href="project-lens.html" class="project-card-hit" aria-label="Lens — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-
-        <article class="project-card reveal" data-category="ios collab">
-          <div class="project-image project-image--solid" style="--project-surface: #153a52;">
-            <div class="project-icon-wrap"><i class="fas fa-coffee"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">Coffee Overflow</h3>
-            <p class="project-card-lead" data-i18n="projects.coffeeLead">Physics stacking rhythm game — identity, clarity, pace.</p>
-            <div class="project-tags"><span class="tag tag--stack">iOS - Game</span></div>
-          </div>
-          <a href="project-coffeeoverflow.html" class="project-card-hit" aria-label="Coffee Overflow — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-
-        <!-- Web & SaaS -->
-        <article class="project-card reveal" data-category="saas">
-          <div class="project-image project-image--solid" style="--project-surface: #1a4d66;">
-            <div class="project-icon-wrap"><i class="fas fa-wallet"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">Bolsofy</h3>
-            <div class="project-tags"><span class="tag tag--stack">Vue.js - Personal Finance</span></div>
-          </div>
-          <a href="project-bolsofy.html" class="project-card-hit" aria-label="Bolsofy — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-
-        <article class="project-card reveal" data-category="saas">
-          <div class="project-image project-image--solid" style="--project-surface: #0f3d52;">
-            <div class="project-icon-wrap"><i class="fas fa-bolt"></i></div>
-          </div>
-          <div class="project-content project-content--minimal">
-            <h3 class="project-card-title">PowerNutri Evolution</h3>
-            <p class="project-card-lead" data-i18n="projects.powerLead">Formerly ZapNutri — nutrition end to end, from WhatsApp-era roots to a full web app.</p>
-            <div class="project-tags"><span class="tag tag--stack">React - Nutrition &amp; Health</span></div>
-          </div>
-          <a href="project-powernutri.html" class="project-card-hit" aria-label="PowerNutri Evolution (formerly ZapNutri) — open project page"><span class="project-card-detail-icon" aria-hidden="true"><i class="fas fa-up-right-from-square"></i></span></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ====== SERVICES ====== -->
   <section class="section" id="services">
     <div class="container">
@@ -566,14 +568,14 @@
   <section class="section" id="contact">
     <div class="container">
       <div class="contact-layout">
-        <div class="contact-info reveal">
+        <div class="contact-info-top reveal">
           <header class="contact-header">
             <span class="section-tag reveal" data-i18n="contact.tag">Contact</span>
             <h2 class="section-title reveal" data-i18n-html="contact.titleHtml">Let's work<br><span class="gradient-text">together</span></h2>
           </header>
           <p class="contact-desc" data-i18n="contact.desc">If you're looking to optimize your digital products or build automations that truly convert — let's talk. I'm always open to discussing new projects and creative ideas.</p>
 
-          <div class="contact-links">
+          <div class="contact-links contact-links--primary">
             <a href="mailto:leo.simonmonteiro@gmail.com" class="contact-link">
               <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
               <div><div class="contact-link-label" data-i18n="contact.emailLabel">Email</div><div class="contact-link-value">leo.simonmonteiro@gmail.com</div></div>
@@ -582,39 +584,49 @@
               <div class="contact-link-icon"><i class="fas fa-globe"></i></div>
               <div><div class="contact-link-label" data-i18n="contact.companyLabel">Company</div><div class="contact-link-value">autobotics.com.br</div></div>
             </a>
-            <a href="https://wa.me/5551993491445" target="_blank" rel="noopener noreferrer" class="contact-link whatsapp-link">
-              <div class="contact-link-icon"><i class="fab fa-whatsapp"></i></div>
-              <div><div class="contact-link-label" data-i18n="contact.waLabel">WhatsApp</div><div class="contact-link-value">+55 51 99349-1445</div></div>
-            </a>
-            <a href="https://www.instagram.com/leonardosimon_/" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--instagram">
-              <div class="contact-link-icon"><i class="fab fa-instagram"></i></div>
-              <div><div class="contact-link-label" data-i18n="contact.igLabel">Instagram</div><div class="contact-link-value" data-i18n="contact.igValue">@leonardosimon_</div></div>
-            </a>
-          </div>
-
-          <div class="socials">
-            <a href="https://github.com/LeoSimonn" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/leonardosimon" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://autobotics.com.br" target="_blank" class="social-link" aria-label="Website"><i class="fas fa-globe"></i></a>
           </div>
         </div>
 
-        <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name" data-i18n="contact.formName">Your Name</label>
-              <input type="text" id="name" data-i18n-placeholder="contact.phName" placeholder="Your full name" required>
-            </div>
-            <div class="form-group">
-              <label for="email" data-i18n="contact.formEmail">Email</label>
-              <input type="email" id="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message" data-i18n="contact.formMessage">Message</label>
-              <textarea id="message" data-i18n-placeholder="contact.phMessage" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg"><span class="btn-shine"></span><span data-i18n="contact.submit">Send Message</span> <i class="fas fa-paper-plane"></i></button>
-          </form>
+        <div class="contact-form-column reveal">
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name" data-i18n="contact.formName">Your Name</label>
+                <input type="text" id="name" data-i18n-placeholder="contact.phName" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="contact.formEmail">Email</label>
+                <input type="email" id="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group form-group--message">
+                <label for="message" data-i18n="contact.formMessage">Message</label>
+                <textarea id="message" data-i18n-placeholder="contact.phMessage" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg"><span class="btn-shine"></span><span data-i18n="contact.submit">Send Message</span> <i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-links contact-links--lower reveal">
+          <a href="https://wa.me/5551993491445" target="_blank" rel="noopener noreferrer" class="contact-link whatsapp-link">
+            <div class="contact-link-icon"><i class="fab fa-whatsapp"></i></div>
+            <div><div class="contact-link-label" data-i18n="contact.waLabel">WhatsApp</div><div class="contact-link-value">+55 51 99349-1445</div></div>
+          </a>
+          <a href="https://www.instagram.com/leonardosimon_/" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--instagram">
+            <div class="contact-link-icon"><i class="fab fa-instagram"></i></div>
+            <div><div class="contact-link-label" data-i18n="contact.igLabel">Instagram</div><div class="contact-link-value" data-i18n="contact.igValue">@leonardosimon_</div></div>
+          </a>
+        </div>
+
+        <div class="contact-links contact-links--social reveal">
+          <a href="https://github.com/LeoSimonn" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--github" data-i18n-aria="contact.githubAria">
+            <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+            <div><div class="contact-link-label" data-i18n="contact.githubLabel">GitHub</div><div class="contact-link-value" data-i18n="contact.githubValue">@LeoSimonn</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/leonardosimon" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--linkedin" data-i18n-aria="contact.linkedinAria">
+            <div class="contact-link-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div><div class="contact-link-label" data-i18n="contact.linkedinLabel">LinkedIn</div><div class="contact-link-value" data-i18n="contact.linkedinValue">in/leonardosimon</div></div>
+          </a>
         </div>
       </div>
     </div>
@@ -627,7 +639,7 @@
     </div>
   </footer>
 
-  <script src="i18n.js?v=1"></script>
+  <script src="i18n.js?v=2"></script>
   <script src="script.js?v=4"></script>
 </body>
 </html>

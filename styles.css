@@ -801,7 +801,8 @@ a:hover { color: var(--accent); opacity: 1; }
 #contact .contact-header .section-title {
   margin: 0;
 }
-.contact-info {
+.contact-info-top {
+  grid-area: info;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -809,21 +810,58 @@ a:hover { color: var(--accent); opacity: 1; }
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.75rem;
+  grid-template-areas:
+    'info'
+    'form'
+    'lower'
+    'social';
+  gap: 1.5rem;
   align-items: start;
+}
+.contact-form-column {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.contact-links--lower {
+  grid-area: lower;
 }
 @media (min-width: 900px) {
   .contact-layout {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-    gap: clamp(1.75rem, 4vw, 2.75rem);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'info form'
+      'lower social';
+    gap: 0.75rem clamp(1.75rem, 4vw, 2.75rem);
     align-items: stretch;
   }
-  .contact-info {
+  .contact-form-column {
     height: 100%;
   }
-  #contact .socials {
-    margin-top: auto;
-    padding-top: 0.5rem;
+  .contact-form-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .contact-form .form-group--message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .contact-form .form-group--message textarea {
+    flex: 1;
+    min-height: 8rem;
   }
 }
 .contact-desc {
@@ -832,7 +870,17 @@ a:hover { color: var(--accent); opacity: 1; }
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
-.contact-links { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+.contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+.contact-links--primary {
+  margin-bottom: 0;
+}
+.contact-links--social {
+  grid-area: social;
+}
+.contact-links--lower .contact-link,
+.contact-links--social .contact-link {
+  min-width: 0;
+}
 .contact-link { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s var(--ease-out); color: var(--text2); text-decoration: none; }
 .contact-link:hover { border-color: var(--accent); transform: translateX(4px); }
 .contact-link-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--accent-dim); border-radius: 10px; color: var(--accent); font-size: 1rem; flex-shrink: 0; }
@@ -840,14 +888,18 @@ a:hover { color: var(--accent); opacity: 1; }
 .contact-link-value { font-size: 0.95rem; color: var(--text); font-weight: 500; }
 
 /* WhatsApp */
-.whatsapp-link { border-color: rgba(37,211,102,0.2); }
-.whatsapp-link:hover { border-color: #25D366; transform: translateX(4px); box-shadow: 0 0 20px rgba(37,211,102,0.15); }
+.whatsapp-link {
+  border-color: rgba(37, 211, 102, 0.22);
+  background: rgba(37, 211, 102, 0.09);
+}
+.whatsapp-link:hover {
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.14);
+  transform: translateX(4px);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.15);
+}
 .whatsapp-link .contact-link-icon { background: rgba(37,211,102,0.15); color: #25D366; }
 .whatsapp-link:hover .contact-link-icon { background: #25D366; color: #fff; box-shadow: 0 0 12px rgba(37,211,102,0.4); }
-
-.socials { display: flex; gap: 0.75rem; }
-.social-link { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; color: var(--text3); font-size: 1.1rem; transition: all 0.3s var(--ease-out); text-decoration: none; }
-.social-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); box-shadow: 0 0 15px var(--accent-dim); }
 
 /* Footer */
 .footer { padding: 2rem 0; border-top: 1px solid var(--border); position: relative; z-index: 2; }
@@ -875,14 +927,7 @@ a:hover { color: var(--accent); opacity: 1; }
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-@media (min-width: 900px) {
-  .contact-form-wrap {
-    height: 100%;
-  }
+  box-sizing: border-box;
 }
 .contact-form {
   display: flex;
@@ -1077,4 +1122,57 @@ body.has-custom-cursor.cursor-hover .custom-cursor__bibata {
 }
 .contact-link--instagram:hover .contact-link-icon {
   box-shadow: 0 0 16px rgba(221, 42, 123, 0.45);
+}
+
+/* GitHub & LinkedIn — same card pattern as WhatsApp / Instagram */
+.contact-link--github {
+  border-color: rgba(36, 41, 47, 0.35);
+  background: linear-gradient(145deg, rgba(36, 41, 47, 0.14), rgba(36, 41, 47, 0.05));
+}
+.contact-link--github:hover {
+  border-color: #30363d;
+  transform: translateX(4px);
+  box-shadow: 0 0 22px rgba(36, 41, 47, 0.25);
+}
+.contact-link--github .contact-link-icon {
+  background: rgba(36, 41, 47, 0.35);
+  color: #f0f6fc;
+}
+.contact-link--github:hover .contact-link-icon {
+  background: #24292f;
+  color: #fff;
+  box-shadow: 0 0 14px rgba(36, 41, 47, 0.45);
+}
+.contact-link--linkedin {
+  border-color: rgba(10, 102, 194, 0.3);
+  background: linear-gradient(145deg, rgba(10, 102, 194, 0.12), rgba(10, 102, 194, 0.04));
+}
+.contact-link--linkedin:hover {
+  border-color: #0a66c2;
+  transform: translateX(4px);
+  box-shadow: 0 0 22px rgba(10, 102, 194, 0.18);
+}
+.contact-link--linkedin .contact-link-icon {
+  background: rgba(10, 102, 194, 0.18);
+  color: #70b5f9;
+}
+.contact-link--linkedin:hover .contact-link-icon {
+  background: #0a66c2;
+  color: #fff;
+  box-shadow: 0 0 14px rgba(10, 102, 194, 0.45);
+}
+[data-theme="light"] .contact-link--github {
+  border-color: rgba(36, 41, 47, 0.14);
+  background: linear-gradient(145deg, rgba(36, 41, 47, 0.06), rgba(255, 255, 255, 0.95));
+}
+[data-theme="light"] .contact-link--linkedin {
+  border-color: rgba(10, 102, 194, 0.2);
+  background: linear-gradient(145deg, rgba(10, 102, 194, 0.08), rgba(255, 255, 255, 0.96));
+}
+[data-theme="light"] .whatsapp-link {
+  border-color: rgba(37, 211, 102, 0.28);
+  background: rgba(37, 211, 102, 0.11);
+}
+[data-theme="light"] .whatsapp-link:hover {
+  background: rgba(37, 211, 102, 0.16);
 }
