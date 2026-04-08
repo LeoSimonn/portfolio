@@ -683,11 +683,11 @@ a:hover { color: var(--accent); opacity: 1; }
 @media (min-width: 1024px) { .projects-grid { grid-template-columns: repeat(3, 1fr); } }
 .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: all 0.3s var(--ease-out); position: relative; }
 .project-card:hover { border-color: var(--border-hover); box-shadow: 0 20px 50px rgba(0,0,0,0.3), 0 0 30px rgba(112,214,255,0.03); transform: translateY(-4px); }
-/* Card inteiro abre a case study; ícone decorativo só na faixa do preview (acima do hit, pointer-events none) */
+/* Card inteiro é um único link; ícone de detalhe fica dentro do <a> para hover/clique coerentes */
 .project-card-hit {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   border-radius: 14px;
   cursor: pointer;
 }
@@ -704,11 +704,11 @@ a:hover { color: var(--accent); opacity: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-  pointer-events: none;
+  z-index: 1;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+  pointer-events: auto;
 }
 .project-card:hover .project-card-detail-icon {
   opacity: 1;
@@ -730,7 +730,13 @@ a:hover { color: var(--accent); opacity: 1; }
 .project-image--solid {
   background: var(--project-surface, #18181b) !important;
 }
-.project-icon-wrap { font-size: 3rem; color: rgba(255,255,255,0.15); position: relative; z-index: 2; }
+.project-icon-wrap {
+  font-size: 3rem;
+  color: rgba(255,255,255,0.15);
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
 .project-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s var(--ease-out); z-index: 3; }
 .project-card:hover .project-overlay { opacity: 1; }
 .project-content { padding: 1.25rem; }

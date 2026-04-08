@@ -161,7 +161,7 @@ function initCustomCursor() {
   let lastHover = false;
 
   const hoverSel =
-    'a, button, [role="button"], .nav-tool-btn, label, .filter-btn, .project-card-hit, .social-link, .back-to-top';
+    'a, button, [role="button"], .nav-tool-btn, label, .filter-btn, .project-card-hit, .project-card-detail-icon, .social-link, .back-to-top';
 
   function onMove(e) {
     mx = e.clientX;
