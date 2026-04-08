@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +12,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
+  <div id="customCursor" class="custom-cursor" aria-hidden="true">
+    <div class="custom-cursor__bibata" role="presentation"></div>
+  </div>
+
   <!-- Loading Screen -->
-  <div id="loader">
+  <div id="loader" role="status" aria-live="polite" aria-label="Loading">
     <div class="loader-inner">
-      <div class="loader-logo">LM</div>
       <div class="loader-track"><span class="loader-fill"></span></div>
     </div>
   </div>
@@ -29,17 +32,21 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-content">
-      <a href="#hero" class="nav-logo">
-        <span class="nav-logo-text">LM</span>
-      </a>
       <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.work">Work</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
       </div>
-      <a href="#contact" class="btn btn-primary nav-cta">Get in Touch <i class="fas fa-arrow-right"></i></a>
+      <div class="nav-tools" role="toolbar" data-i18n-aria="nav.toolsToolbarAria" aria-label="Appearance and language">
+        <button type="button" class="nav-tool-btn" id="themeToggle" aria-label="Switch to light mode">
+          <i class="fas fa-sun" id="themeToggleIcon" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="nav-tool-btn" id="langToggle" data-i18n-aria="nav.langAria" aria-label="Switch language">
+          <span class="nav-tool-label" id="langToggleLabel">PT</span>
+        </button>
+      </div>
+      <a href="#contact" class="btn btn-primary nav-cta" data-i18n-aria="nav.ctaAria" aria-label="Go to contact section"><span class="btn-shine" aria-hidden="true"></span><span data-i18n="nav.cta">Get in touch</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
     </div>
   </nav>
 
@@ -52,7 +59,7 @@
     <div class="hero-container"><div class="hero-content">
       <div class="available-badge reveal">
         <span class="badge-dot"></span>
-        Available for contact!
+        <span data-i18n="hero.badge">Available for contact!</span>
       </div>
       <h1 class="hero-title">
         <span class="hero-name-block">
@@ -60,39 +67,39 @@
           <span class="hero-row reveal"><span class="hero-name gradient-text">Monteiro</span></span>
         </span>
         <span class="hero-role-block">
-          <span class="hero-row reveal"><span class="hero-role">UI/UX Designer · AI Automation</span></span>
-          <span class="hero-row reveal"><span class="hero-role">Founder at <a href="https://autobotics.com.br" target="_blank">Autobotics</a></span></span>
+          <span class="hero-row reveal"><span class="hero-role" data-i18n="hero.role1">UI/UX Designer · AI Automation</span></span>
+          <span class="hero-row reveal"><span class="hero-role" data-i18n-html="hero.role2Html">Founder at <a href="https://autobotics.com.br" target="_blank" rel="noopener noreferrer">Autobotics</a></span></span>
         </span>
       </h1>
-      <p class="hero-tagline reveal">Products with purpose, usability, and performance. I transform businesses into memorable experiences by combining design thinking with intelligent automation.</p>
+      <p class="hero-tagline reveal" data-i18n="hero.tagline">Products with purpose, usability, and performance. I transform businesses into memorable experiences by combining design thinking with intelligent automation.</p>
       <div class="hero-stats reveal">
         <div class="stat-item">
            <span class="stat-number-wrap"><span class="stat-number" data-target="120" data-suffix="+">0</span></span>
-          <span class="stat-label">3D Projects Delivered</span>
+          <span class="stat-label" data-i18n="hero.stat1">3D Projects Delivered</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
            <span class="stat-number-wrap"><span class="stat-number" data-target="80" data-suffix="h">0</span></span>
-          <span class="stat-label">Saved / Month for Clients</span>
+          <span class="stat-label" data-i18n="hero.stat2">Saved / Month for Clients</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
            <span class="stat-number-wrap"><span class="stat-number" data-target="60" data-suffix="%">0</span></span>
-          <span class="stat-label">Faster Response Time</span>
+          <span class="stat-label" data-i18n="hero.stat3">Faster Response Time</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
            <span class="stat-number-wrap"><span class="stat-number" data-target="35" data-suffix="%">0</span></span>
-          <span class="stat-label">Production Increase</span>
+          <span class="stat-label" data-i18n="hero.stat4">Production Increase</span>
         </div>
       </div>
       <div class="hero-actions reveal">
-        <a href="#projects" class="btn btn-primary btn-lg"><span class="btn-shine"></span>View Projects <i class="fas fa-arrow-right"></i></a>
-        <a href="#contact" class="btn btn-ghost btn-lg">Let's Talk <i class="fas fa-chevron-right"></i></a>
+        <a href="#projects" class="btn btn-primary btn-lg"><span class="btn-shine"></span><span data-i18n="hero.btnProjects">View Projects</span> <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost btn-lg"><span data-i18n="hero.btnTalk">Let's Talk</span> <i class="fas fa-chevron-right"></i></a>
       </div>
       <div class="scroll-indicator">
         <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-        <span class="scroll-text">Scroll</span>
+        <span class="scroll-text" data-i18n="hero.scroll">Scroll</span>
       </div>
     </div></div>
   </section>
@@ -137,8 +144,8 @@
   <section class="section" id="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag reveal">About Me</span>
-        <h2 class="section-title reveal">
+        <span class="section-tag reveal" data-i18n="about.tag">About Me</span>
+        <h2 class="section-title reveal" data-i18n-html="about.titleHtml">
           Where <span class="gradient-text">design meets</span><br>
           <span class="gradient-text">technology & ambition</span>
         </h2>
@@ -150,10 +157,10 @@
         <!-- ROW 1: Wide intro (spans 3 cols) -->
         <div class="bento-card bento-row-full reveal" data-tilt-card>
           <div class="bento-intro">
-            <p class="intro-lead">
+            <p class="intro-lead" data-i18n-html="about.intro1Html">
               I'm an <strong>entrepreneur at heart</strong>, driven by the intersection of <span class="gradient-text">design, AI, and automation</span>. My mission: transform businesses into memorable experiences by building products with purpose, usability, and performance.
             </p>
-            <p>
+            <p data-i18n-html="about.intro2Html">
               My journey began in childhood in a family immersed in design — from CorelDraw and Photoshop to SketchUp and Enscape. Today that foundation flows into <strong>Figma</strong> for UI/UX and <strong>low-code platforms</strong> like n8n, Make, and Lovable to ship products fast.
             </p>
           </div>
@@ -163,14 +170,14 @@
         <div class="bento-card bento-col-1 reveal" data-tilt-card>
           <div class="bento-header">
             <div class="bento-icon apple-bg"><i class="fab fa-apple"></i></div>
-            <span class="bento-badge">Current Role</span>
+            <span class="bento-badge" data-i18n="bento.current">Current Role</span>
           </div>
-          <h3 class="bento-title">UI/UX Designer Intern</h3>
-          <p class="bento-sub">Apple Developer Academy · PUCRS</p>
-          <p class="bento-desc">
+          <h3 class="bento-title" data-i18n="bento.appleTitle">UI/UX Designer Intern</h3>
+          <p class="bento-sub" data-i18n="bento.appleSub">Apple Developer Academy · PUCRS</p>
+          <p class="bento-desc" data-i18n-html="bento.appleD1Html">
             Across Academy projects I lead <strong>UX flows, interfaces, visual identity, and product decisions</strong> — and step into code when design needs to meet the shipped app. <strong>InsightUp</strong> was my solo build; every other app was a <strong>5-person</strong>, cross-functional team effort.
           </p>
-          <p class="bento-desc" style="margin-top:.5rem">
+          <p class="bento-desc" style="margin-top:.5rem" data-i18n-html="bento.appleD2Html">
             I also bring <strong>AI</strong> into solutions and into the room: helping teammates use it strategically. On <strong>Clairfy</strong> and <strong>RetroTrip</strong> I served as <strong>Product Owner</strong> — priorities, vision, and alignment between experience and development.
           </p>
         </div>
@@ -178,19 +185,19 @@
         <div class="bento-card bento-col-2 reveal" data-tilt-card>
           <div class="bento-header">
             <div class="bento-icon ppg-bg"><i class="fas fa-paint-roller"></i></div>
-            <span class="bento-badge">Real Impact</span>
+            <span class="bento-badge" data-i18n="bento.impact">Real Impact</span>
           </div>
-          <h3 class="bento-title">120+ Store Designs</h3>
-          <p class="bento-sub">Novaletra · Tintas Renner by PPG</p>
-          <p class="bento-desc">
+          <h3 class="bento-title" data-i18n="bento.storesTitle">120+ Store Designs</h3>
+          <p class="bento-sub" data-i18n="bento.storesSub">Novaletra · Tintas Renner by PPG</p>
+          <p class="bento-desc" data-i18n-html="bento.storesD1Html">
             Through <strong>Novaletra Comunicação Visual</strong>, I create 3D architectural visualizations for <strong>Tintas Renner</strong> — an iconic Brazilian paints brand acquired by <strong>PPG Industries</strong> (US global leader in coatings, based in Gravataí/RS).
           </p>
-          <p class="bento-desc" style="margin-top:.75rem">
+          <p class="bento-desc" style="margin-top:.75rem" data-i18n-html="bento.storesD2Html">
             While 3D isn't my primary passion, the results speak for themselves: <strong>120+ stores launched</strong> and <strong>35% production increase</strong>.
           </p>
           <div class="bento-stats">
-            <div class="mini-stat"><div class="mini-num gradient-text">120+</div><div class="mini-label">Store Projects</div></div>
-            <div class="mini-stat"><div class="mini-num gradient-text">35%</div><div class="mini-label">Production Increase</div></div>
+            <div class="mini-stat"><div class="mini-num gradient-text">120+</div><div class="mini-label" data-i18n="bento.miniStore">Store Projects</div></div>
+            <div class="mini-stat"><div class="mini-num gradient-text">35%</div><div class="mini-label" data-i18n="bento.miniProd">Production Increase</div></div>
           </div>
         </div>
 
@@ -198,14 +205,14 @@
         <div class="bento-card bento-col-1 reveal" data-tilt-card>
           <div class="bento-header">
             <div class="bento-icon ai-bg"><i class="fas fa-robot"></i></div>
-            <span class="bento-badge">Founder</span>
+            <span class="bento-badge" data-i18n="bento.founder">Founder</span>
           </div>
-          <h3 class="bento-title">AI & Automation</h3>
-          <p class="bento-sub">Autobotics</p>
-          <p class="bento-desc">
+          <h3 class="bento-title" data-i18n="bento.aiTitle">AI & Automation</h3>
+          <p class="bento-sub" data-i18n="bento.aiSub">Autobotics</p>
+          <p class="bento-desc" data-i18n-html="bento.aiD1Html">
             I connect n8n, Make, and Manychat to AI models — saving clients up to <strong>80 hours/month</strong>. This is where my passion for AI, automation, and entrepreneurship converge.
           </p>
-          <p class="bento-desc" style="margin-top:.5rem">
+          <p class="bento-desc" style="margin-top:.5rem" data-i18n-html="bento.aiD2Html">
             I leverage Replit Agent and Lovable to ship MVPs in <strong>days</strong>, not months.
           </p>
           <div class="bento-tags">
@@ -217,16 +224,16 @@
         <div class="bento-card bento-col-2 reveal" data-tilt-card>
           <div class="bento-header">
             <div class="bento-icon founder-bg"><i class="fas fa-wallet"></i></div>
-            <span class="bento-badge">Founder</span>
+            <span class="bento-badge" data-i18n="bento.founder">Founder</span>
           </div>
-          <h3 class="bento-title">Shipping Products</h3>
-          <p class="bento-sub">Not Just Ideas</p>
-          <p class="bento-desc">
+          <h3 class="bento-title" data-i18n="bento.shipTitle">Shipping Products</h3>
+          <p class="bento-sub" data-i18n="bento.shipSub">Not Just Ideas</p>
+          <p class="bento-desc" data-i18n-html="bento.shipD1Html">
             Entrepreneurship isn't a job title — it's how I think. I've shipped <strong>6+ digital products</strong> — from finance (Bolsofy) to AI in health (Clairfy) to native iOS games and tools at the Academy.
           </p>
           <div class="bento-stats">
-            <div class="mini-stat"><div class="mini-num gradient-text">6+</div><div class="mini-label">Products Shipped</div></div>
-            <div class="mini-stat"><div class="mini-num gradient-text">&lt;7d</div><div class="mini-label">MVP to Launch</div></div>
+            <div class="mini-stat"><div class="mini-num gradient-text">6+</div><div class="mini-label" data-i18n="bento.miniProducts">Products Shipped</div></div>
+            <div class="mini-stat"><div class="mini-num gradient-text">&lt;7d</div><div class="mini-label" data-i18n="bento.miniMvp">MVP to Launch</div></div>
           </div>
         </div>
 
@@ -237,58 +244,58 @@
         <div class="bento-card reveal" data-tilt-card>
           <div class="bento-header">
             <div class="bento-icon skills-bg"><i class="fas fa-layer-group"></i></div>
-            <span class="bento-badge">Toolkit</span>
+            <span class="bento-badge" data-i18n="bento.toolkit">Toolkit</span>
           </div>
-          <h3 class="bento-title">Core Skills</h3>
+          <h3 class="bento-title" data-i18n="bento.coreSkills">Core Skills</h3>
           <div class="pill-grid">
-            <span class="pill"><i class="fas fa-palette"></i>UI/UX Design</span>
-            <span class="pill"><i class="fas fa-robot"></i>AI & Automation</span>
-            <span class="pill"><i class="fas fa-bolt"></i>Low-Code</span>
-            <span class="pill"><i class="fas fa-cube"></i>3D Visualization</span>
-            <span class="pill"><i class="fas fa-code"></i>Web Dev</span>
-            <span class="pill"><i class="fas fa-mobile-alt"></i>Swift / iOS</span>
-            <span class="pill"><i class="fas fa-server"></i>Python</span>
-            <span class="pill"><i class="fab fa-react"></i>React</span>
-            <span class="pill"><i class="fas fa-chart-line"></i>Strategy</span>
+            <span class="pill"><i class="fas fa-palette"></i><span data-i18n="bento.pillUx">UI/UX Design</span></span>
+            <span class="pill"><i class="fas fa-robot"></i><span data-i18n="bento.pillAi">AI & Automation</span></span>
+            <span class="pill"><i class="fas fa-bolt"></i><span data-i18n="bento.pillLow">Low-Code</span></span>
+            <span class="pill"><i class="fas fa-cube"></i><span data-i18n="bento.pill3d">3D Visualization</span></span>
+            <span class="pill"><i class="fas fa-code"></i><span data-i18n="bento.pillWeb">Web Dev</span></span>
+            <span class="pill"><i class="fas fa-mobile-alt"></i><span data-i18n="bento.pillSwift">Swift / iOS</span></span>
+            <span class="pill"><i class="fas fa-server"></i><span data-i18n="bento.pillPy">Python</span></span>
+            <span class="pill"><i class="fab fa-react"></i><span data-i18n="bento.pillReact">React</span></span>
+            <span class="pill"><i class="fas fa-chart-line"></i><span data-i18n="bento.pillStrategy">Strategy</span></span>
           </div>
         </div>
         <div class="bento-card reveal" data-tilt-card>
           <div class="bento-header">
             <div class="bento-icon"><i class="fas fa-graduation-cap"></i></div>
-            <span class="bento-badge">Education</span>
+            <span class="bento-badge" data-i18n="bento.eduBadge">Education</span>
           </div>
-          <h3 class="bento-title">Education &amp; Certifications</h3>
+          <h3 class="bento-title" data-i18n="bento.eduTitle">Education &amp; Certifications</h3>
           <div class="edu-cards-grid" role="list">
             <article class="edu-card" role="listitem">
               <div class="edu-card-icon" aria-hidden="true"><i class="fas fa-university"></i></div>
               <div class="edu-card-text">
-                <h4 class="edu-card-degree">B.S. Software Engineering</h4>
-                <p class="edu-card-inst">PUCRS · Pontifícia Universidade Católica do Rio Grande do Sul · Brazil — RS</p>
-                <p class="edu-card-meta">In Progress — 2022—2026</p>
+                <h4 class="edu-card-degree" data-i18n="bento.edu1deg">B.S. Software Engineering</h4>
+                <p class="edu-card-inst" data-i18n="bento.edu1inst">PUCRS · Pontifícia Universidade Católica do Rio Grande do Sul · Brazil — RS</p>
+                <p class="edu-card-meta" data-i18n="bento.edu1meta">In Progress — 2022—2026</p>
               </div>
             </article>
             <article class="edu-card" role="listitem">
               <div class="edu-card-icon" aria-hidden="true"><i class="fas fa-gamepad"></i></div>
               <div class="edu-card-text">
-                <h4 class="edu-card-degree">B.S. Digital Games</h4>
-                <p class="edu-card-inst">Centro Universitário Ritter dos Reis — UniRitter · Brazil — RS</p>
-                <p class="edu-card-meta">Completed — 2022—2024</p>
+                <h4 class="edu-card-degree" data-i18n="bento.edu2deg">B.S. Digital Games</h4>
+                <p class="edu-card-inst" data-i18n="bento.edu2inst">Centro Universitário Ritter dos Reis — UniRitter · Brazil — RS</p>
+                <p class="edu-card-meta" data-i18n="bento.edu2meta">Completed — 2022—2024</p>
               </div>
             </article>
             <article class="edu-card" role="listitem">
               <div class="edu-card-icon" aria-hidden="true"><i class="fab fa-apple"></i></div>
               <div class="edu-card-text">
-                <h4 class="edu-card-degree">Apple Foundations Program</h4>
-                <p class="edu-card-inst">Apple Developer Academy @ TECNOPUC · PUCRS</p>
-                <p class="edu-card-meta">Certified — 2025</p>
+                <h4 class="edu-card-degree" data-i18n="bento.edu3deg">Apple Foundations Program</h4>
+                <p class="edu-card-inst" data-i18n="bento.edu3inst">Apple Developer Academy @ TECNOPUC · PUCRS</p>
+                <p class="edu-card-meta" data-i18n="bento.edu3meta">Certified — 2025</p>
               </div>
             </article>
             <article class="edu-card" role="listitem">
               <div class="edu-card-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
               <div class="edu-card-text">
-                <h4 class="edu-card-degree">UX Design, AI &amp; Gamification</h4>
-                <p class="edu-card-inst">PUCRS · Pontifícia Universidade Católica do Rio Grande do Sul · Brazil — RS</p>
-                <p class="edu-card-meta">Certified — Jan 2024</p>
+                <h4 class="edu-card-degree" data-i18n="bento.edu4deg">UX Design, AI &amp; Gamification</h4>
+                <p class="edu-card-inst" data-i18n="bento.edu4inst">PUCRS · Pontifícia Universidade Católica do Rio Grande do Sul · Brazil — RS</p>
+                <p class="edu-card-meta" data-i18n="bento.edu4meta">Certified — Jan 2024</p>
               </div>
             </article>
           </div>
@@ -302,8 +309,8 @@
   <section class="section" id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag reveal">Experience</span>
-        <h2 class="section-title reveal">Where I've <span class="gradient-text">made impact</span></h2>
+        <span class="section-tag reveal" data-i18n="experience.tag">Experience</span>
+        <h2 class="section-title reveal" data-i18n-html="experience.titleHtml">Where I've <span class="gradient-text">made impact</span></h2>
       </div>
 
       <div class="timeline">
@@ -311,12 +318,12 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <div><h3>UI/UX Designer — Intern</h3>
-                <span class="timeline-company"><i class="fab fa-apple"></i> Apple Developer Academy | PUCRS</span>
+              <div><h3 data-i18n="experience.e1title">UI/UX Designer — Intern</h3>
+                <span class="timeline-company"><i class="fab fa-apple"></i> <span data-i18n="experience.e1company">Apple Developer Academy | PUCRS</span></span>
               </div>
-              <span class="timeline-date">Feb 2025 — Present</span>
+              <span class="timeline-date" data-i18n="experience.e1date">Feb 2025 — Present</span>
             </div>
-            <p class="timeline-desc">Native iOS apps at the Academy: end-to-end UI/UX — flows, interfaces, identity, and usability — plus PO ownership on Clairfy and RetroTrip, and hands-on Swift/SwiftUI when bridging design to the build. Strong focus on applied AI in products and mentoring peers on strategic use of AI.</p>
+            <p class="timeline-desc" data-i18n="experience.e1desc">Native iOS apps at the Academy: end-to-end UI/UX — flows, interfaces, identity, and usability — plus PO ownership on Clairfy and RetroTrip, and hands-on Swift/SwiftUI when bridging design to the build. Strong focus on applied AI in products and mentoring peers on strategic use of AI.</p>
             <div class="timeline-tags"><span class="tag">Figma</span><span class="tag">SwiftUI</span><span class="tag">SCRUM</span><span class="tag">Product Owner</span><span class="tag">AI</span></div>
           </div>
         </div>
@@ -325,10 +332,10 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <div><h3>Founder</h3><span class="timeline-company"><i class="fas fa-wallet"></i> Bolsofy</span></div>
-              <span class="timeline-date">May 2025 — Present</span>
+              <div><h3 data-i18n="experience.e2title">Founder</h3><span class="timeline-company"><i class="fas fa-wallet"></i> <span data-i18n="experience.e2company">Bolsofy</span></span></div>
+              <span class="timeline-date" data-i18n="experience.e2date">May 2025 — Present</span>
             </div>
-            <p class="timeline-desc">Building a personal finance management platform with budget tracking and financial insights. Focused on making money management intuitive and accessible for everyone.</p>
+            <p class="timeline-desc" data-i18n="experience.e2desc">Building a personal finance management platform with budget tracking and financial insights. Focused on making money management intuitive and accessible for everyone.</p>
             <div class="timeline-tags"><span class="tag">Vue.js</span><span class="tag">Firebase</span><span class="tag">Charts</span><span class="tag">Product Design</span></div>
           </div>
         </div>
@@ -337,10 +344,10 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <div><h3>Founder</h3><span class="timeline-company"><i class="fas fa-robot"></i> Autobotics</span></div>
-              <span class="timeline-date">Sep 2024 — Present</span>
+              <div><h3 data-i18n="experience.e3title">Founder</h3><span class="timeline-company"><i class="fas fa-robot"></i> <span data-i18n="experience.e3company">Autobotics</span></span></div>
+              <span class="timeline-date" data-i18n="experience.e3date">Sep 2024 — Present</span>
             </div>
-            <p class="timeline-desc">AI automation consultancy connecting low-code platforms (n8n, Make, Manychat) to AI models. Saving clients up to 80 hours/month through intelligent chatbots and workflow optimization.</p>
+            <p class="timeline-desc" data-i18n="experience.e3desc">AI automation consultancy connecting low-code platforms (n8n, Make, Manychat) to AI models. Saving clients up to 80 hours/month through intelligent chatbots and workflow optimization.</p>
             <div class="timeline-tags"><span class="tag">n8n</span><span class="tag">Make</span><span class="tag">Manychat</span><span class="tag">LLMs</span><span class="tag">Python</span></div>
           </div>
         </div>
@@ -349,10 +356,10 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <div><h3>3D & Graphic Designer</h3><span class="timeline-company"><i class="fas fa-cube"></i> Novaletra Comunicação Visual</span></div>
-              <span class="timeline-date">Dec 2021 — Present</span>
+              <div><h3 data-i18n="experience.e4title">3D & Graphic Designer</h3><span class="timeline-company"><i class="fas fa-cube"></i> <span data-i18n="experience.e4company">Novaletra Comunicação Visual</span></span></div>
+              <span class="timeline-date" data-i18n="experience.e4date">Dec 2021 — Present</span>
             </div>
-            <p class="timeline-desc">Developing 3D architectural visualizations and commercial establishment projects from concept to high-quality renders. Delivered 120+ store projects for <strong>Tintas Renner by PPG</strong>, increasing production by 35%.</p>
+            <p class="timeline-desc" data-i18n-html="experience.e4desc">Developing 3D architectural visualizations and commercial establishment projects from concept to high-quality renders. Delivered 120+ store projects for <strong>Tintas Renner by PPG</strong>, increasing production by 35%.</p>
             <div class="timeline-tags"><span class="tag">SketchUp</span><span class="tag">Enscape</span><span class="tag">CorelDraw</span><span class="tag">Photoshop</span></div>
           </div>
         </div>
@@ -361,10 +368,10 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <div><h3>Web Designer</h3><span class="timeline-company"><i class="fas fa-globe"></i> MEconecte</span></div>
-              <span class="timeline-date">Jun 2023 — Aug 2024</span>
+              <div><h3 data-i18n="experience.e5title">Web Designer</h3><span class="timeline-company"><i class="fas fa-globe"></i> <span data-i18n="experience.e5company">MEconecte</span></span></div>
+              <span class="timeline-date" data-i18n="experience.e5date">Jun 2023 — Aug 2024</span>
             </div>
-            <p class="timeline-desc">Designed and maintained interfaces for web and mobile platforms, ensuring usability and responsiveness. Focused on optimizing user experience and adapting to digital market trends.</p>
+            <p class="timeline-desc" data-i18n="experience.e5desc">Designed and maintained interfaces for web and mobile platforms, ensuring usability and responsiveness. Focused on optimizing user experience and adapting to digital market trends.</p>
             <div class="timeline-tags"><span class="tag">UI Design</span><span class="tag">Responsive</span><span class="tag">Mobile</span></div>
           </div>
         </div>
@@ -373,10 +380,10 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <div><h3>Co-Founder</h3><span class="timeline-company"><i class="fas fa-handshake"></i> Free From Club</span></div>
-              <span class="timeline-date">Nov 2022 — Dec 2023</span>
+              <div><h3 data-i18n="experience.e6title">Co-Founder</h3><span class="timeline-company"><i class="fas fa-handshake"></i> <span data-i18n="experience.e6company">Free From Club</span></span></div>
+              <span class="timeline-date" data-i18n="experience.e6date">Nov 2022 — Dec 2023</span>
             </div>
-            <p class="timeline-desc">Brand design and app development with innovative, user-friendly screens. Website design and impactful visual content for social media.</p>
+            <p class="timeline-desc" data-i18n="experience.e6desc">Brand design and app development with innovative, user-friendly screens. Website design and impactful visual content for social media.</p>
             <div class="timeline-tags"><span class="tag">Brand Design</span><span class="tag">App Design</span><span class="tag">Social Media</span></div>
           </div>
         </div>
@@ -388,19 +395,19 @@
   <section class="section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag reveal">Selected Work</span>
-        <h2 class="section-title reveal">Things I've <span class="gradient-text">brought to life</span></h2>
+        <span class="section-tag reveal" data-i18n="projects.tag">Selected Work</span>
+        <h2 class="section-title reveal" data-i18n-html="projects.titleHtml">Things I've <span class="gradient-text">brought to life</span></h2>
       </div>
 
-      <p class="projects-lead reveal">
+      <p class="projects-lead reveal" data-i18n-html="projects.leadHtml">
         At the <strong>Apple Developer Academy</strong>, I shipped native iOS apps in Swift &amp; SwiftUI — solo on <strong>InsightUp</strong>, and in five-person teams on the rest. Below: Academy work first, then web &amp; SaaS products. <strong>Click a card</strong> to open the full case study; hover the preview for the link hint.
       </p>
 
       <div class="filter-bar reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="saas">SaaS</button>
-        <button class="filter-btn" data-filter="ios">iOS · Academy</button>
-        <button class="filter-btn" data-filter="collab">Collaborations</button>
+        <button type="button" class="filter-btn active" data-filter="all" data-i18n="projects.fAll">All</button>
+        <button type="button" class="filter-btn" data-filter="saas" data-i18n="projects.fSaas">SaaS</button>
+        <button type="button" class="filter-btn" data-filter="ios" data-i18n="projects.fIos">iOS · Academy</button>
+        <button type="button" class="filter-btn" data-filter="collab" data-i18n="projects.fCollab">Collaborations</button>
       </div>
 
       <div class="projects-grid">
@@ -411,7 +418,7 @@
           </div>
           <div class="project-content project-content--minimal">
             <h3 class="project-card-title">InsightUp</h3>
-            <p class="project-card-lead">Solo build: capture ideas, get AI-backed feasibility and next steps.</p>
+            <p class="project-card-lead" data-i18n="projects.insightLead">Solo build: capture ideas, get AI-backed feasibility and next steps.</p>
             <div class="project-tags"><span class="tag tag--stack">iOS - AI &amp; Ideation</span></div>
           </div>
           <a href="project-insightup.html" class="project-card-hit" aria-label="InsightUp — open project page"></a>
@@ -424,7 +431,7 @@
           </div>
           <div class="project-content project-content--minimal">
             <h3 class="project-card-title">Clairfy</h3>
-            <p class="project-card-lead">UI/UX &amp; PO: visit audio, AI summaries, two language levels.</p>
+            <p class="project-card-lead" data-i18n="projects.clairfyLead">UI/UX &amp; PO: visit audio, AI summaries, two language levels.</p>
             <div class="project-tags"><span class="tag tag--stack">iOS - Health</span></div>
           </div>
           <a href="project-clairfy.html" class="project-card-hit" aria-label="Clairfy — open project page"></a>
@@ -437,7 +444,7 @@
           </div>
           <div class="project-content project-content--minimal">
             <h3 class="project-card-title">RetroTrip</h3>
-            <p class="project-card-lead">UI/UX &amp; PO: 3D history scenes + observation quiz loop.</p>
+            <p class="project-card-lead" data-i18n="projects.retroLead">UI/UX &amp; PO: 3D history scenes + observation quiz loop.</p>
             <div class="project-tags"><span class="tag tag--stack">iOS - Education &amp; History</span></div>
           </div>
           <a href="project-retrotrip.html" class="project-card-hit" aria-label="RetroTrip — open project page"></a>
@@ -450,7 +457,7 @@
           </div>
           <div class="project-content project-content--minimal">
             <h3 class="project-card-title">Lens</h3>
-            <p class="project-card-lead">Analog-inspired capture: develop, haptics, gallery wall.</p>
+            <p class="project-card-lead" data-i18n="projects.lensLead">Analog-inspired capture: develop, haptics, gallery wall.</p>
             <div class="project-tags"><span class="tag tag--stack">iOS - Photography</span></div>
           </div>
           <a href="project-lens.html" class="project-card-hit" aria-label="Lens — open project page"></a>
@@ -463,7 +470,7 @@
           </div>
           <div class="project-content project-content--minimal">
             <h3 class="project-card-title">Coffee Overflow</h3>
-            <p class="project-card-lead">Physics stacking rhythm game — identity, clarity, pace.</p>
+            <p class="project-card-lead" data-i18n="projects.coffeeLead">Physics stacking rhythm game — identity, clarity, pace.</p>
             <div class="project-tags"><span class="tag tag--stack">iOS - Game</span></div>
           </div>
           <a href="project-coffeeoverflow.html" class="project-card-hit" aria-label="Coffee Overflow — open project page"></a>
@@ -489,7 +496,7 @@
           </div>
           <div class="project-content project-content--minimal">
             <h3 class="project-card-title">PowerNutri Evolution</h3>
-            <p class="project-card-lead">Formerly ZapNutri — nutrition end to end, from WhatsApp-era roots to a full web app.</p>
+            <p class="project-card-lead" data-i18n="projects.powerLead">Formerly ZapNutri — nutrition end to end, from WhatsApp-era roots to a full web app.</p>
             <div class="project-tags"><span class="tag tag--stack">React - Nutrition &amp; Health</span></div>
           </div>
           <a href="project-powernutri.html" class="project-card-hit" aria-label="PowerNutri Evolution (formerly ZapNutri) — open project page"></a>
@@ -503,60 +510,60 @@
   <section class="section" id="services">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag reveal">Services</span>
-        <h2 class="section-title reveal">What I <span class="gradient-text">bring to the table</span></h2>
+        <span class="section-tag reveal" data-i18n="services.tag">Services</span>
+        <h2 class="section-title reveal" data-i18n-html="services.titleHtml">What I <span class="gradient-text">bring to the table</span></h2>
       </div>
 
       <div class="services-grid">
         <div class="service-card reveal tilt-card">
           <div class="service-number">01</div>
           <div class="service-icon"><i class="fas fa-palette"></i></div>
-          <h3>Product Design</h3>
-          <p>End-to-end design from research to launch — obsessive attention to usability.</p>
+          <h3 data-i18n="services.s1title">Product Design</h3>
+          <p data-i18n="services.s1desc">End-to-end design from research to launch — obsessive attention to usability.</p>
           <ul class="service-list">
-            <li>UX Research & Strategy</li>
-            <li>UI Design & Prototyping</li>
-            <li>Design Systems</li>
-            <li>Usability Testing</li>
+            <li data-i18n="services.s1l1">UX Research & Strategy</li>
+            <li data-i18n="services.s1l2">UI Design & Prototyping</li>
+            <li data-i18n="services.s1l3">Design Systems</li>
+            <li data-i18n="services.s1l4">Usability Testing</li>
           </ul>
         </div>
 
         <div class="service-card reveal tilt-card">
           <div class="service-number">02</div>
           <div class="service-icon"><i class="fas fa-robot"></i></div>
-          <h3>AI & Automation</h3>
-          <p>Intelligent systems that save 80+ hours per month in client workflows.</p>
+          <h3 data-i18n="services.s2title">AI & Automation</h3>
+          <p data-i18n="services.s2desc">Intelligent systems that save 80+ hours per month in client workflows.</p>
           <ul class="service-list">
-            <li>LLM Integration</li>
-            <li>Workflow Automation (n8n)</li>
-            <li>Chatbot Development</li>
-            <li>Data Processing Pipelines</li>
+            <li data-i18n="services.s2l1">LLM Integration</li>
+            <li data-i18n="services.s2l2">Workflow Automation (n8n)</li>
+            <li data-i18n="services.s2l3">Chatbot Development</li>
+            <li data-i18n="services.s2l4">Data Processing Pipelines</li>
           </ul>
         </div>
 
         <div class="service-card reveal tilt-card">
           <div class="service-number">03</div>
           <div class="service-icon"><i class="fas fa-code"></i></div>
-          <h3>Web & Mobile Dev</h3>
-          <p>Production-ready apps from MVP to scale.</p>
+          <h3 data-i18n="services.s3title">Web & Mobile Dev</h3>
+          <p data-i18n="services.s3desc">Production-ready apps from MVP to scale.</p>
           <ul class="service-list">
-            <li>Web Applications</li>
-            <li>iOS Apps (Swift)</li>
-            <li>API Development</li>
-            <li>Cloud Deployment</li>
+            <li data-i18n="services.s3l1">Web Applications</li>
+            <li data-i18n="services.s3l2">iOS Apps (Swift)</li>
+            <li data-i18n="services.s3l3">API Development</li>
+            <li data-i18n="services.s3l4">Cloud Deployment</li>
           </ul>
         </div>
 
         <div class="service-card reveal tilt-card">
           <div class="service-number">04</div>
           <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Strategy & Consulting</h3>
-          <p>Technical strategy, product roadmap, and rapid low-code prototyping.</p>
+          <h3 data-i18n="services.s4title">Strategy & Consulting</h3>
+          <p data-i18n="services.s4desc">Technical strategy, product roadmap, and rapid low-code prototyping.</p>
           <ul class="service-list">
-            <li>Technical Strategy</li>
-            <li>Product Roadmap</li>
-            <li>MVP Development</li>
-            <li>3D Visualization</li>
+            <li data-i18n="services.s4l1">Technical Strategy</li>
+            <li data-i18n="services.s4l2">Product Roadmap</li>
+            <li data-i18n="services.s4l3">MVP Development</li>
+            <li data-i18n="services.s4l4">3D Visualization</li>
           </ul>
         </div>
       </div>
@@ -566,25 +573,29 @@
   <section class="section" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag reveal">Contact</span>
-        <h2 class="section-title reveal">Let's work<br><span class="gradient-text">together</span></h2>
+        <span class="section-tag reveal" data-i18n="contact.tag">Contact</span>
+        <h2 class="section-title reveal" data-i18n-html="contact.titleHtml">Let's work<br><span class="gradient-text">together</span></h2>
       </div>
       <div class="contact-layout">
         <div class="contact-info reveal">
-          <p class="contact-desc">If you're looking to optimize your digital products or build automations that truly convert — let's talk. I'm always open to discussing new projects and creative ideas.</p>
+          <p class="contact-desc" data-i18n="contact.desc">If you're looking to optimize your digital products or build automations that truly convert — let's talk. I'm always open to discussing new projects and creative ideas.</p>
 
           <div class="contact-links">
             <a href="mailto:leo.simonmonteiro@gmail.com" class="contact-link">
               <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
-              <div><div class="contact-link-label">Email</div><div class="contact-link-value">leo.simonmonteiro@gmail.com</div></div>
+              <div><div class="contact-link-label" data-i18n="contact.emailLabel">Email</div><div class="contact-link-value">leo.simonmonteiro@gmail.com</div></div>
             </a>
-            <a href="https://autobotics.com.br" target="_blank" class="contact-link">
+            <a href="https://autobotics.com.br" target="_blank" rel="noopener noreferrer" class="contact-link">
               <div class="contact-link-icon"><i class="fas fa-globe"></i></div>
-              <div><div class="contact-link-label">Company</div><div class="contact-link-value">autobotics.com.br</div></div>
+              <div><div class="contact-link-label" data-i18n="contact.companyLabel">Company</div><div class="contact-link-value">autobotics.com.br</div></div>
             </a>
-            <a href="https://wa.me/5551993491445" target="_blank" class="contact-link whatsapp-link">
+            <a href="https://wa.me/5551993491445" target="_blank" rel="noopener noreferrer" class="contact-link whatsapp-link">
               <div class="contact-link-icon"><i class="fab fa-whatsapp"></i></div>
-              <div><div class="contact-link-label">WhatsApp</div><div class="contact-link-value">+55 51 99349-1445</div></div>
+              <div><div class="contact-link-label" data-i18n="contact.waLabel">WhatsApp</div><div class="contact-link-value">+55 51 99349-1445</div></div>
+            </a>
+            <a href="https://www.instagram.com/leonardosimon_/" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--instagram">
+              <div class="contact-link-icon"><i class="fab fa-instagram"></i></div>
+              <div><div class="contact-link-label" data-i18n="contact.igLabel">Instagram</div><div class="contact-link-value" data-i18n="contact.igValue">@leonardosimon_</div></div>
             </a>
           </div>
 
@@ -598,18 +609,18 @@
         <div class="contact-form-wrap reveal">
           <form class="contact-form" id="contactForm">
             <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="Your full name" required>
+              <label for="name" data-i18n="contact.formName">Your Name</label>
+              <input type="text" id="name" data-i18n-placeholder="contact.phName" placeholder="Your full name" required>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" required>
+              <label for="email" data-i18n="contact.formEmail">Email</label>
+              <input type="email" id="email" data-i18n-placeholder="contact.phEmail" placeholder="your@email.com" required>
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+              <label for="message" data-i18n="contact.formMessage">Message</label>
+              <textarea id="message" data-i18n-placeholder="contact.phMessage" placeholder="Tell me about your project..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg"><span class="btn-shine"></span>Send Message <i class="fas fa-paper-plane"></i></button>
+            <button type="submit" class="btn btn-primary btn-lg"><span class="btn-shine"></span><span data-i18n="contact.submit">Send Message</span> <i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
@@ -618,11 +629,12 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-content">
-      <p class="footer-text">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. Products with purpose, usability, and performance.</p>
-      <a href="#hero" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      <p class="footer-text" data-i18n-html="footer.textHtml">&copy; 2026 <span class="gradient-text">Leonardo Monteiro</span>. Products with purpose, usability, and performance.</p>
+      <a href="#hero" class="back-to-top" data-i18n-aria="footer.backTopAria" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="i18n.js?v=1"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

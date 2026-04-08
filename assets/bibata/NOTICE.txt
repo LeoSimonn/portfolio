@@ -1,0 +1,5 @@
+Cursor artwork derived from Bibata Modern Ice by Abdulkaiz Khatri / ful1e5.
+Source: https://github.com/ful1e5/Bibata_Cursor
+License: GPL-3.0
+
+This site uses only the Ice color mapping (white fill, black outline) in light and dark UI themes.

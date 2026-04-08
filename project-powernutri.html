@@ -14,9 +14,8 @@
 </head>
 <body class="project-page">
 
-  <div id="loader">
+  <div id="loader" role="status" aria-live="polite" aria-label="Loading">
     <div class="loader-inner">
-      <div class="loader-logo">LM</div>
       <div class="loader-track"><span class="loader-fill"></span></div>
     </div>
   </div>
@@ -25,15 +24,13 @@
 
   <nav class="nav" id="nav">
     <div class="nav-content">
-      <a href="index.html" class="nav-logo"><span class="nav-logo-text">LM</span></a>
       <div class="nav-links">
         <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#experience" class="nav-link">Work</a>
         <a href="index.html#projects" class="nav-link">Projects</a>
         <a href="index.html#services" class="nav-link">Services</a>
-        <a href="index.html#contact" class="nav-link">Contact</a>
       </div>
-      <a href="index.html#contact" class="btn btn-primary nav-cta"><span class="btn-shine"></span>Get in Touch</a>
+      <a href="index.html#contact" class="btn btn-primary nav-cta" aria-label="Go to contact section"><span class="btn-shine" aria-hidden="true"></span>Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
     </div>
   </nav>
 
